@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
             title: "AMAZING MICRO BLADING IN <br/> VESU",
             description:
               "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.",
-            link: "#",
+            link: "blogdetails.html",
             date: "23 August",
           },
           {
@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
             imagedate: "./images/Group 1000004474.png",
             title: "SEMI PERMANENT LIPS MAKEUP IN <br/> VESU.",
             description: "t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.",
-            link: "#",
+            link: "blogdetails.html",
             date: "25 August",
           },
           {
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
             imagedate: "./images/Group 1000004475.png",
             title: "LATEST MICRO BLADIND OFFER <br/> AVAILABLE IN VESU SURAT",
             description: "t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.",
-            link: "#",
+            link: "blogdetails.html",
             date: "27 August",
           },
 
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
             title: "AMAZING MICRO BLADING IN <br/> VESU",
             description:
               "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.",
-            link: "#",
+            link: "blogdetails.html",
             date: "23 August",
           },
           {
@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
             imagedate: "./images/Group 1000004474.png",
             title: "SEMI PERMANENT LIPS MAKEUP IN <br/> VESU.",
             description: "t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.",
-            link: "#",
+            link: "blogdetails.html",
             date: "25 August",
           },
           {
@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
             imagedate: "./images/Group 1000004475.png",
             title: "LATEST MICRO BLADIND OFFER <br/> AVAILABLE IN VESU SURAT",
             description: "t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.",
-            link: "#",
+            link: "blogdetails.html",
             date: "27 August",
           },
 
@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
             title: "AMAZING MICRO BLADING IN <br/> VESU",
             description:
               "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.",
-            link: "#",
+              link: "blogdetails.html",
             date: "23 August",
           },
           {
@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
             imagedate: "./images/Group 1000004474.png",
             title: "SEMI PERMANENT LIPS MAKEUP IN <br/> VESU.",
             description: "t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.",
-            link: "#",
+            link: "blogdetails.html",
             date: "25 August",
           },
           {
@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
             imagedate: "./images/Group 1000004475.png",
             title: "LATEST MICRO BLADIND OFFER <br/> AVAILABLE IN VESU SURAT",
             description: "t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.",
-            link: "#",
+            link: "blogdetails.html",
             date: "27 August",
           },
 
@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
             title: "AMAZING MICRO BLADING IN <br/> VESU",
             description:
               "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.",
-            link: "#",
+              link: "blogdetails.html",
             date: "23 August",
           },
           {
@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
             imagedate: "./images/Group 1000004474.png",
             title: "SEMI PERMANENT LIPS MAKEUP IN <br/> VESU.",
             description: "t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.",
-            link: "#",
+            link: "blogdetails.html",
             date: "25 August",
           },
           {
@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
             imagedate: "./images/Group 1000004475.png",
             title: "LATEST MICRO BLADIND OFFER <br/> AVAILABLE IN VESU SURAT",
             description: "t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.",
-            link: "#",
+            link: "blogdetails.html",
             date: "27 August",
           },
         
