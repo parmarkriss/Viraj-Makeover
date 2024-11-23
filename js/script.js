@@ -34,12 +34,13 @@ document.addEventListener("DOMContentLoaded", () => {
   ];
 
   const cardContainer = document.getElementById("card-container");
+  
 
   data.forEach((item, index) => {
     const card = document.createElement("div");
     card.className = "shadow-md rounded-lg overflow-hidden";
 
-    const isGreen = index === 0; // Check if it's the first item
+    const isGreen = index === 0; 
 
     card.innerHTML = `
       <div class="max-w-md  bg-[#242424] border border-gray-200 rounded-lg shadow-md overflow-hidden">
@@ -73,10 +74,11 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
       </div>
     `;
-
     cardContainer.appendChild(card);
   });
 });
+
+
 
 // product 
 const cardsData = [
@@ -150,6 +152,13 @@ function renderPagination() {
 // Initial render
 renderCards(currentPage);
 renderPagination();
+
+
+// artical and news 
+
+
+
+
 
 
 

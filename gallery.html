@@ -23,18 +23,6 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
         rel="stylesheet">
-
-    <!-- jQuery CDN -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <!-- Slick Slider CSS -->
-    <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
-
-    <!-- Slick Slider Theme CSS -->
-    <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
-
 </head>
 
 <body>
@@ -76,12 +64,12 @@
                 <a href="about.html" class="text-xl">About</a>
                 <a href="product.html" class="text-xl">Product</a>
                 <a href="gallery.html" class="text-xl">Gallery</a>
+                <a href="blog.html" class="text-xl">Blog</a>
             </div>
         </div>
     </header>
 
-
-    <!-- about us  -->
+    <!-- gallery  -->
     <section class="relative bg-[url('images/about.png')] h-[550px] bg-cover bg-center flex items-center -z-10">
         <div class="absolute inset-0 bg-black opacity-60 mix-blend-multiply"></div>
         <div class="container mx-auto px-4">
@@ -91,7 +79,7 @@
                         class="top-[25%] absolute sm:left-[10%] md:left-[15%] lg:left-[12%]">
                     <h1
                         class="uppercase text-[50px] sm:text-[60px] md:text-[70px] lg:text-[80px] font font-bold text-white absolute sm:left-[10%] md:left-[12%] lg:left-[15%] sm:top-[25%] md:top-[30%] lg:top-[35%]">
-                        PRODUCTS
+                        GALLERY
                     </h1>
                 </div>
             </div>
@@ -114,65 +102,97 @@
         </div>
     </section>
 
-    <section class="bg-[#212121] py-16">
+    <!-- gallery photo -->
+    <section class="bg-[#131313] py-16">
         <div class="container mx-auto">
             <div class="row">
-                <div class="flex flex-col items-center text-center">
-                    <div class="flex items-center justify-center space-x-3">
-                        <h1 class="font text-[48px] font-bold text-white">
-                            We Provided <span class="text-[#009746]">Best Services</span>
-                        </h1>
-                        <img src="images/Section.png" alt="Section Icon" class="w-10 h-10">
+                <div class="flex items-center justify-center space-x-3">
+                    <h1 class="font text-[48px] font-bold text-white">
+                        Explore <span class="text-[#009746]">Photo's</span>
+                    </h1>
+                    <img src="images/Section.png" alt="Section Icon" class="w-10 h-10">
+                </div>
+                <div class="grid grid-cols-10 pt-5">
+                    <!-- 70% Section -->
+                    <div class="col-span-10 md:col-span-6 flex  items-center rounded-lg">
+                        <img src="images/Group 1000004109.png" alt="Image 1" class="rounded-lg">
+                    </div>
+                    <!-- 30% Section -->
+                    <div class="col-span-10 md:col-span-4 flex  items-center">
+                        <img src="images/Rectangle 4331.png" alt="Image 2" class="rounded-lg w-full">
                     </div>
                 </div>
-                <div class="flex">
-                    <!-- Sidebar -->
-                    <aside class="w-1/4  border   border-gray-400">
-                        <h2 class="text-xl font-bold mb-4 px-2 bg-[#3C3C3C] py-2 text-white text-h">Categories</h2>
-                        <ul class="space-y-2 p-3 text-[#FEFEFE]">
-                            <li><a href="#">All</a></li>
-                            <li><a href="#">Surat</a></li>
-                            <li><a href="#">Nail Studio</a></li>
-                            <li><a href="#">Pure Facial</a></li>
-                            <li><a href="#">Makeup</a></li>
-                            <li><a href="#">Hair Colour</a></li>
-                            <li><a href="#">Hair Colours</a></li>
-                            <li><a href="#">Hair Texture</a></li>
-                            <li><a href="#">Hair Basic</a></li>
-                            <li><a href="#">Hair</a></li>
-                            <li><a href="#">Nail</a></li>
-                            <li><a href="#">Threading</a></li>
-                            <li><a href="#">Colour</a></li>
-                            <li><a href="#">Surat</a></li>
-                            <li><a href="#">All</a></li>
-                            <li><a href="#">Surat</a></li>
-                            <li><a href="#">All</a></li>
-                            <li><a href="#">Surat</a></li>
-                            <li><a href="#">All</a></li>
-                            <li><a href="#">Surat</a></li>
-                            <li><a href="#">All</a></li>
-                            <li><a href="#">Surat</a></li>
-                            <li><a href="#">All</a></li>
-                            <li><a href="#">Surat</a></li>
-                            <li><a href="#">All</a></li>
-                            <li><a href="#">Surat</a></li>
-                            <!-- Add more categories as needed -->
-                        </ul>
-                    </aside>
 
-                    <!-- Main Content -->
-                    <main class="w-3/4 p-5">
-                        <div id="card-containers" class="grid grid-cols-2 gap-5">
-                          <!-- Cards will be dynamically added here -->
-                        </div>
-                      
-                        <!-- Pagination controls -->
-                        <div id="pagination-controls" class="flex justify-center mt-5 space-x-3"></div>
-                      </main>                      
+                <div class="grid grid-cols-4 pt-5 gap-4">
+
+                    <div>
+                        <img src="images/Rectangle 4332.png" alt="" class="w-full">
+                    </div>
+                    <div>
+                        <img src="images/Rectangle 4333.png" alt="" class="w-full">
+                    </div>
+                    <div>
+                        <img src="images/Rectangle 4334.png" alt="" class="w-full">
+                    </div>
+                    <div>
+                        <img src="images/Rectangle 4335.png" alt="" class="w-full">
+                    </div>
                 </div>
+
+                <div class="grid grid-cols-10 pt-5 items-center justify-between gap-4">
+                    <div class="col-span-10 md:col-span-4 items-center">
+                        <img src="images/Rectangle 4337.png" alt="Image 2" class="pb-5">
+
+                        <img src="images/Rectangle 4338.png" alt="Image 2" class="pt-5">
+
+                    </div>
+
+                    <div class="col-span-10 md:col-span-6  rounded-lg">
+                        <img src="images/Rectangle 4336.png" alt="Image 2" class="rounded-lg w-full">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-4 pt-5 gap-4">
+                    <div>
+                        <img src="images/Rectangle 4332 (1).png" alt="" class="w-full">
+                    </div>
+                    <div>
+                        <img src="images/Rectangle 4333 (1).png" alt="" class="w-full">
+                    </div>
+                    <div>
+                        <img src="images/Rectangle 4334 (1).png" alt="" class="w-full">
+                    </div>
+                    <div>
+                        <img src="images/Rectangle 4335 (1).png" alt="" class="w-full">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-10 pt-5 items-center justify-between gap-4">
+                    <div class="col-span-10 md:col-span-6  rounded-lg">
+                        <img src="images/Rectangle 4336 (1).png" alt="Image 2" class="rounded-lg w-full">
+                    </div>
+
+                    <div class="col-span-10 md:col-span-4 items-center">
+                        <img src="images/Rectangle 4337 (1).png" alt="Image 2" class="pb-5">
+
+                        <img src="images/Rectangle 4338 (1).png" alt="Image 2" class="pt-5">
+
+                    </div>
+                </div>
+
+                <div class="flex justify-center pt-5">
+                    <button
+                        class="bg-[#009746] font tetx-[18px] text-white px-4 py-2 rounded-full hover:bg-green-600 transition mt-5">
+                        Load More <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+
             </div>
         </div>
+
     </section>
+
+
 
     <!-- footer  -->
     <footer class=" bg-[#242424]  text-center text-white pt-10 pb-4">
