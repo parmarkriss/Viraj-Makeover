@@ -78,5 +78,85 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// product 
+const cardsData = [
+  { image: 'images/Rectangle 4342.png', title: 'Pure Facial', link: 'productdetails.html' },
+  { image: 'images/Rectangle 4348.png', title: 'Exhibition In Surat', link: 'productdetails.html' },
+  { image: 'images/Rectangle 4341.png', title: 'Hair Colour', link: 'productdetails.html' },
+  { image: 'images/Rectangle 4343.png', title: 'Hair Texture', link: 'productdetails.html' },
+  { image: 'images/Rectangle 4344.png', title: 'Bridal Makeup', link: 'productdetails.html' },
+  { image: 'images/Rectangle 4347.png', title: 'Groom Makeup', link: 'productdetails.html' },
+  { image: 'images/Rectangle 4346.png', title: 'Sider Makeup', link: 'productdetails.html' },
+  { image: 'images/Rectangle 4345.png', title: 'Reception Makeup', link: 'productdetails.html' },
+  { image: 'images/Rectangle 4342.png', title: 'Skin Treatment', link: 'productdetails.html' }
+];
+
+const cardsPerPage = 8; // Number of cards per page
+let currentPage = 1; // Current page
+
+const cardContainer = document.getElementById('card-containers');
+const paginationControls = document.getElementById('pagination-controls');
+
+// Function to render cards for the current page
+function renderCards(page) {
+  cardContainer.innerHTML = ''; // Clear previous cards
+  const startIndex = (page - 1) * cardsPerPage;
+  const endIndex = startIndex + cardsPerPage;
+
+  // Add cards for the current page
+  const currentCards = cardsData.slice(startIndex, endIndex);
+  currentCards.forEach(data => {
+    const card = `
+      <div class="shadow-lg rounded-lg overflow-hidden p-3 border-[1px]">
+        <img src="${data.image}" alt="${data.title}" class="w-full h-56 rounded-md object-cover bg-center">
+        <div class="flex justify-between items-center p-4">
+          <h3 class="text-lg font-bold mb-2">${data.title}</h3>
+          <div>
+            <a href="${data.link}" class="bg-[#009746] text-white px-6 py-3 rounded-full hover:bg-green-600 transition font">
+              Explore <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>`;
+    cardContainer.innerHTML += card;
+  });
+}
+
+// Function to render pagination controls
+function renderPagination() {
+  paginationControls.innerHTML = ''; // Clear previous controls
+  const totalPages = Math.ceil(cardsData.length / cardsPerPage);
+
+  for (let i = 1; i <= totalPages; i++) {
+    const button = document.createElement('button');
+    button.textContent = i;
+    button.className = `px-4 py-2 rounded ${
+      i === currentPage
+        ? 'bg-blue-500 text-white'
+        : 'bg-gray-200 text-gray-800 hover:bg-gray-300'
+    }`;
+
+    // Add click event to change page
+    button.addEventListener('click', () => {
+      currentPage = i;
+      renderCards(currentPage);
+      renderPagination();
+    });
+
+    paginationControls.appendChild(button);
+  }
+}
+
+// Initial render
+renderCards(currentPage);
+renderPagination();
+
+
+
+
+
+
+
+
 
 
