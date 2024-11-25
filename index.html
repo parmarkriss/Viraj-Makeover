@@ -20,22 +20,16 @@
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
         rel="stylesheet">
 
-    <!-- jQuery CDN -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <!-- Slick Slider CSS -->
     <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
-
-    <!-- Slick Slider Theme CSS -->
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
     <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" />
 
 </head>
 
 <body>
     <!-- Container -->
-    <header class="bg-[#212121] border-b-2 ">
+    <header class="bg-[#212121] border-b-2" id="header">
         <div class="container mx-auto">
             <!-- Header Section -->
             <div class="flex items-center justify-between p-4">
@@ -43,14 +37,14 @@
                 <div class="flex items-center order-1 md:order-2">
                     <img src="images/viraj_logo-removebg-preview 1.png" alt="Logo" class="w-14">
                 </div>
-    
-                <!-- Menu Icon -->
+
+                <!-- Menu Icon (Hamburger) -->
                 <div class="text-white order-2 md:order-1">
                     <button id="menu-toggle">
                         <i class="fa-solid fa-bars text-[24px]"></i>
                     </button>
                 </div>
-    
+
                 <!-- Search & Button -->
                 <div class="hidden md:flex items-center space-x-4 order-3">
                     <!-- Search Icon -->
@@ -63,20 +57,45 @@
                 </div>
             </div>
         </div>
-    
-        <!-- Menu Section (Initially hidden) -->
-        <div id="menu"
-            class="hidden md:bg-[url('images/Rectangle.png')] bg-cover absolute top-22 left-0 w-full h-96 bg-cover bg-center bg-[#212121]  flex items-center justify-center font">
-            <div class="flex flex-col space-y-4 text-white">
-                <a href="index.html" class="text-xl">Home</a>
-                <a href="about.html" class="text-xl">About</a>
-                <a href="product.html" class="text-xl">Product</a>
-                <a href="gallery.html" class="text-xl">Gallery</a>
+    </header>
+
+    <!-- Menu Section (Initially hidden) -->
+    <div id="menu"
+        class="hidden md:bg-[url('images/Rectangle.png')] absolute top-0 left-0 w-full h-[55%] bg-cover bg-center bg-[#212121] z-50 transform transition-all duration-500 ease-in-out">
+        <div class="container mx-auto">
+            <div class="row">
+                <div class="py-5">
+                    <!-- Top Section: Logo and Close Button -->
+                    <div class="flex justify-between items-center md:justify-start">
+                        <!-- Logo: Hidden on mobile, visible on medium and larger screens -->
+                        <img src="images/viraj_logo-removebg-preview 1.png" alt="Logo" class="w-20 hidden md:block">
+                    
+                        <!-- Close Button: Visible on all screen sizes, aligned to the end on mobile -->
+                        <button id="close-menu"
+                            class="text-white text-2xl w-12 h-12 bg-gradient-to-r from-[#fefefe95] to-[#f1f1f19e] rounded-full flex justify-center items-center ml-auto md:ml-0">
+                            <i class="fa-solid fa-times"></i>
+                        </button>
+                    </div>
+                    
+                    
+
+                    <!-- Navigation Links -->
+                    <ul class="flex flex-col space-y-4 text-white font text-center">
+                        <li><a href="index.html" class="text-xl nav-link">Home</a></li>
+                        <li><a href="about.html" class="text-xl nav-link">About</a></li>
+                        <li><a href="product.html" class="text-xl nav-link">Product</a></li>
+                        <li><a href="gallery.html" class="text-xl nav-link">Gallery</a></li>
+                        <li><a href="blog.html" class="text-xl nav-link">Blog</a></li>
+                        <li><a href="contact.html" class="text-xl nav-link">Contact Us</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </header>
-    
-    
+    </div>
+
+
+
+
 
     <!-- slider section -->
     <section class="relative flex items-center justify-center bg-[#242424] -z-10">
@@ -314,16 +333,14 @@
                 </div>
 
                 <div class="pt-5">
-                    <div class="grid grid-cols-3">
+                    <!-- Slick Slider Container -->
+                    <div class="reviews-slider">
+                        <!-- Review Item 1 -->
                         <div class="bg-[url('images/1k.png')] p-12 rounded-md ">
                             <p class="text-center text-[18px] text-white text-font">OHHHH Thanks god !!!! Finally there
-                                is
-                                <br>someone making it for me to use on my projects.Love yait for me to use on my
-                                <br>projects.
-                            </p>
-
+                                is someone making it for me to use on my projects.Love yait for me to use on my
+                                projects.</p>
                             <img src="images/Star.png" alt="" class="text-center pt-10 mx-auto">
-
                             <div class="flex justify-center items-center pt-14">
                                 <img src="images/Ellipse 1.png" alt="">
                                 <div class="ms-3">
@@ -333,15 +350,12 @@
                             </div>
                         </div>
 
+                        <!-- Review Item 2 -->
                         <div class="bg-[url('images/1k.png')] p-12 rounded-md mx-3">
                             <p class="text-center text-[18px] text-white text-font">OHHHH Thanks god !!!! Finally there
-                                is
-                                <br>someone making it for me to use on my projects.Love yait for me to use on my
-                                <br>projects.
-                            </p>
-
+                                is someone making it for me to use on my projects.Love yait for me to use on my
+                                projects.</p>
                             <img src="images/Star.png" alt="" class="text-center pt-10 mx-auto">
-
                             <div class="flex justify-center items-center pt-14">
                                 <img src="images/Ellipse 2.png" alt="">
                                 <div class="ms-3">
@@ -350,23 +364,69 @@
                                 </div>
                             </div>
                         </div>
+
+                        <!-- Review Item 3 -->
                         <div class="bg-[url('images/1k.png')] p-12 rounded-md ">
                             <p class="text-center text-[18px] text-white text-font">OHHHH Thanks god !!!! Finally there
-                                is
-                                <br>someone making it for me to use on my projects.Love yait for me to use on my
-                                <br>projects.
-                            </p>
-
+                                is someone making it for me to use on my projects.Love yait for me to use on my
+                                projects.</p>
                             <img src="images/Star.png" alt="" class="text-center pt-10 mx-auto">
-
                             <div class="flex justify-center items-center pt-14">
                                 <img src="images/Ellipse 2 (1).png" alt="">
                                 <div class="ms-3">
-                                    <h3 class="text-white text-[24px] font">Emily </h3>
+                                    <h3 class="text-white text-[24px] font">Emily</h3>
                                     <p class="text-[18px] text-[#B8B8B8]">Lead designer</p>
                                 </div>
                             </div>
                         </div>
+
+                        <!-- Review Item 1 -->
+                        <div class="bg-[url('images/1k.png')] p-12 rounded-md ">
+                            <p class="text-center text-[18px] text-white text-font">OHHHH Thanks god !!!! Finally there
+                                is someone making it for me to use on my projects.Love yait for me to use on my
+                                projects.</p>
+                            <img src="images/Star.png" alt="" class="text-center pt-10 mx-auto">
+                            <div class="flex justify-center items-center pt-14">
+                                <img src="images/Ellipse 1.png" alt="">
+                                <div class="ms-3">
+                                    <h3 class="text-white text-[24px] font">John Williams</h3>
+                                    <p class="text-[18px] text-[#B8B8B8]">Lead designer</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Review Item 2 -->
+                        <div class="bg-[url('images/1k.png')] p-12 rounded-md mx-3">
+                            <p class="text-center text-[18px] text-white text-font">OHHHH Thanks god !!!! Finally there
+                                is someone making it for me to use on my projects.Love yait for me to use on my
+                                projects.</p>
+                            <img src="images/Star.png" alt="" class="text-center pt-10 mx-auto">
+                            <div class="flex justify-center items-center pt-14">
+                                <img src="images/Ellipse 2.png" alt="">
+                                <div class="ms-3">
+                                    <h3 class="text-white text-[24px] font">Jane Copper</h3>
+                                    <p class="text-[18px] text-[#B8B8B8]">Lead designer</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Review Item 3 -->
+                        <div class="bg-[url('images/1k.png')] p-12 rounded-md ">
+                            <p class="text-center text-[18px] text-white text-font">OHHHH Thanks god !!!! Finally there
+                                is someone making it for me to use on my projects.Love yait for me to use on my
+                                projects.</p>
+                            <img src="images/Star.png" alt="" class="text-center pt-10 mx-auto">
+                            <div class="flex justify-center items-center pt-14">
+                                <img src="images/Ellipse 2 (1).png" alt="">
+                                <div class="ms-3">
+                                    <h3 class="text-white text-[24px] font">Emily</h3>
+                                    <p class="text-[18px] text-[#B8B8B8]">Lead designer</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+
                     </div>
                 </div>
             </div>
@@ -427,11 +487,11 @@
         </div>
     </section>
 
-    <!-- blog  -->
 
+    <!-- blog  -->
     <section class="bg-[#212121]">
         <div class="container mx-auto">
-            <div class="row">
+            <div class="row ">
                 <div class="flex flex-col items-center text-center ">
                     <div class="flex items-center justify-center space-x-3">
                         <h1 class="font text-[48px] font-bold text-white">
@@ -463,12 +523,15 @@
                     <div class="">
                         <img src="images/viraj_logo-removebg-preview 1.png" alt="" class="pb-3">
                         <div>
-                            <p class="text-start text-[#B8B8B8]">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </p>
+                            <p class="text-start text-[#B8B8B8]">It is a long established fact that a reader will be
+                                distracted by the readable content of a page when looking at its layout. It is a long
+                                established fact that a reader will be distracted by the readable content of a page when
+                                looking at its layout. </p>
                         </div>
                     </div>
                     <div>
                         <div class="grid grid-cols-4">
-                             <div class="ps-5">
+                            <div class="ps-5">
                                 <h5 class="text-font text-lg text-start">privacy's</h5>
                                 <div class="w-[30px] h-[1px] bg-slate-200 my-2"></div>
                                 <ul class="list-disc pl-6 text-start text-[#B8B8B8]">
@@ -476,9 +539,9 @@
                                     <li class="py-3">Terms & Conditions</li>
                                     <li>Privacy Policy</li>
                                     <li class="py-3">Refund and Returns</li>
-                                </ul>                                
-                             </div>
-                             <div class="ps-5">
+                                </ul>
+                            </div>
+                            <div class="ps-5">
                                 <h5 class="text-font text-lg text-start">Quick Links</h5>
                                 <div class="w-[30px] h-[1px] bg-slate-200 my-2"></div>
                                 <ul class="list-disc pl-6 text-start text-[#B8B8B8]">
@@ -486,9 +549,9 @@
                                     <li class="py-3">Skin</li>
                                     <li>Hair Colour</li>
                                     <li class="py-3">Nail Studio</li>
-                                </ul>                                
-                             </div>
-                             <div class="ps-5">
+                                </ul>
+                            </div>
+                            <div class="ps-5">
                                 <h5 class="text-font text-lg text-start">Pages</h5>
                                 <div class="w-[30px] h-[1px] bg-slate-200 my-2"></div>
                                 <ul class="list-disc pl-6 text-start text-[#B8B8B8]">
@@ -498,9 +561,9 @@
                                     <li class="py-3">Blog</li>
                                     <li>Contact Us</li>
 
-                                </ul>                                
-                             </div>
-                             <div class="ps-5">
+                                </ul>
+                            </div>
+                            <div class="ps-5">
                                 <h5 class="text-font text-lg text-start">Social Media</h5>
                                 <div class="w-[30px] h-[1px] bg-slate-200 my-2"></div>
                                 <div class="flex">
@@ -513,25 +576,67 @@
                                     <div class="w-[35px] h-[35px] p-1 rounded-full border-[1px] border-gray-100">
                                         <i class="fa-brands fa-youtube"></i>
                                     </div>
-                                </div>                             
-                             </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                
+
             </div>
         </div>
         <div class="border-[0.5px] mt-3"></div>
         <div class=" text-center py-3">
             <p class="text-[#B8B8B8] text-sm">Viraj Makeover - All rights reserved - 2023</p>
         </div>
-    </footer> 
+    </footer>
 
 
 
 
     <script src="js/script.js"></script>
+
+    <!-- jquery cdn  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script type="text/javascript">
+        $('.reviews-slider').slick({
+            dots: true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 1500,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        infinite: true,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        });
+
+    </script>
+
 </body>
 
 </html>

@@ -14,4 +14,18 @@
     font-family: "Lora", serif;
 }
 
+.reviews-slider .slick-slide {
+    margin: 0 15px;  /* Adds space between slides */
+}
+
+.slick-prev, .slick-next {
+    font-size: 24px;
+    color: #009746;  /* Customize arrow color */
+    z-index: 1;
+}
+
+.slick-prev:hover, .slick-next:hover {
+    color: #fff;  /* Change color on hover */
+}
+
 

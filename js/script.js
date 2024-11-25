@@ -1,8 +1,34 @@
-document.getElementById('menu-toggle').addEventListener('click', function () {
-  const menu = document.getElementById('menu');
-  menu.classList.toggle('hidden'); // Toggles the visibility of the menu
+const menuToggle = document.getElementById('menu-toggle');
+const menu = document.getElementById('menu');
+const header = document.getElementById('header');
+const closeMenu = document.getElementById('close-menu');
+
+// Toggle the menu visibility
+menuToggle.addEventListener('click', function () {
+    menu.classList.toggle('hidden');
+    header.classList.toggle('hidden'); // Hide the header when the menu is open
 });
 
+// Close the menu
+closeMenu.addEventListener('click', function () {
+    menu.classList.add('hidden');
+    header.classList.remove('hidden'); // Show the header again when the menu is closed
+});
+
+ // Get the current page URL
+ const currentPages = window.location.pathname;
+
+ // Select all the navigation links
+ const navLinks = document.querySelectorAll('.nav-link');
+
+ // Loop through all links and add active class to the current page's link
+ navLinks.forEach(link => {
+     if (link.href.includes(currentPages)) {
+         link.classList.add('text-[#009746]');  // Apply blue color to the active page link
+     } else {
+         link.classList.add('text-white'); // Apply white color to the non-active links
+     }
+ });
 
 document.addEventListener("DOMContentLoaded", () => {
   const data = [
