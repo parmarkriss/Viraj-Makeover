@@ -30,6 +30,8 @@ closeMenu.addEventListener('click', function () {
      }
  });
 
+
+ 
 document.addEventListener("DOMContentLoaded", () => {
   const data = [
     {
@@ -73,7 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const isGreen = index === 0; 
   
     card.innerHTML = `
-      <div class="max-w-md md:max-w-sm xl:max-w-xl bg-[#242424] border border-gray-200 rounded-lg shadow-md overflow-hidden">
+      <div class="max-w-md md:max-w-sm xl:max-w-xl bg-[#242424] border border-gray-200 rounded-lg shadow-md overflow-hidden ">
         <div class="relative">
           <img 
             class="w-full h-56 object-cover" 
