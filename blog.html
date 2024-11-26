@@ -26,23 +26,24 @@
 </head>
 
 <body>
-    <!-- Container -->
-    <header class="bg-[#212121] border-b-2 ">
+    <!-- Header Section (Sticky) -->
+    <header class="bg-[#212121] border-b-2" id="header">
         <div class="container mx-auto">
             <!-- Header Section -->
             <div class="flex items-center justify-between p-4">
                 <!-- Logo -->
-                <div class="flex items-center order-1 md:order-2">
-                    <img src="images/viraj_logo-removebg-preview 1.png" alt="Logo" class="w-14">
+                <div class="relative flex items-center order-1 md:order-2">
+                    <img src="images/viraj_logo-removebg-preview 1.png" alt="Logo" class="w-20">
+                    <img src="images/Group 26 (1).png" alt="" class="absolute top-0 right-[-15px]">
                 </div>
-    
-                <!-- Menu Icon -->
+
+                <!-- Menu Icon (Hamburger) -->
                 <div class="text-white order-2 md:order-1">
                     <button id="menu-toggle">
                         <i class="fa-solid fa-bars text-[24px]"></i>
                     </button>
                 </div>
-    
+
                 <!-- Search & Button -->
                 <div class="hidden md:flex items-center space-x-4 order-3">
                     <!-- Search Icon -->
@@ -55,20 +56,40 @@
                 </div>
             </div>
         </div>
-    
-        <!-- Menu Section (Initially hidden) -->
-        <div id="menu"
-            class="hidden md:bg-[url('images/Rectangle.png')] bg-cover absolute top-22 left-0 w-full h-96 bg-cover bg-center bg-[#212121]  flex items-center justify-center font">
-            <div class="flex flex-col space-y-4 text-white">
-                <a href="index.html" class="text-xl">Home</a>
-                <a href="about.html" class="text-xl">About</a>
-                <a href="product.html" class="text-xl">Product</a>
-                <a href="gallery.html" class="text-xl">Gallery</a>
-                <a href="blog.html" class="text-xl">Blog</a>
-                <a href="contact.html" class="text-xl">Contact Us</a>
+    </header>
+
+    <!-- Menu Section (Initially hidden) -->
+    <div id="menu"
+        class="hidden md:bg-[url('images/Rectangle.png')] absolute top-0 left-0 w-full h-[55%] bg-cover bg-center bg-[#212121] z-50 transform transition-all duration-500 ease-in-out">
+        <div class="container mx-auto">
+            <div class="row">
+                <div class="pt-5">
+                    <!-- Top Section: Logo and Close Button -->
+                    <div class="flex justify-between items-center md:justify-between">
+                        <!-- Logo: Hidden on mobile, visible on medium and larger screens -->
+                        <img src="images/viraj_logo-removebg-preview 1.png" alt="Logo" class="w-20 hidden md:block">
+
+                        <!-- Close Button: Visible on all screen sizes, aligned to the end on mobile -->
+                        <button id="close-menu"
+                            class="text-white text-2xl w-12 h-12 bg-gradient-to-r from-[#fefefe7a] to-[#f1f1f17b] rounded-full flex justify-center items-center ml-auto md:ml-0">
+                            <i class="fa-solid fa-times"></i>
+                        </button>
+                    </div>
+
+
+                    <!-- Navigation Links -->
+                    <ul class="flex flex-col space-y-4 text-white font text-center ">
+                        <li><a href="index.html" class="text-2xl nav-link">Home</a></li>
+                        <li><a href="about.html" class="text-2xl nav-link">About Us</a></li>
+                        <li><a href="product.html" class="text-2xl nav-link">Products</a></li>
+                        <li><a href="gallery.html" class="text-2xl nav-link">Gallery</a></li>
+                        <li><a href="blog.html" class="text-2xl nav-link">Blog</a></li>
+                        <li><a href="contact.html" class="text-2xl nav-link">Contact Us</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </header>
+    </div>
 
     <!-- gallery  -->
     <section class="relative bg-[url('images/about.png')] h-[550px] bg-cover bg-center flex items-center -z-10">
@@ -105,14 +126,14 @@
 
     <section class="bg-[#212121] py-16">
         <div class="container mx-auto">
-           <div class="row">
-            <div class="flex items-center justify-center space-x-3">
-                <h1 class="font text-[48px] font-bold text-white">
-                    The Latest  <span class="text-[#009746]">Article & News</span>
-                </h1>
-                <img src="images/Section.png" alt="Section Icon" class="w-10 h-10">
+            <div class="row">
+                <div class="flex items-center justify-center space-x-3">
+                    <h1 class="font text-[48px] font-bold text-white">
+                        The Latest <span class="text-[#009746]">Article & News</span>
+                    </h1>
+                    <img src="images/Section.png" alt="Section Icon" class="w-10 h-10">
+                </div>
             </div>
-           </div>
         </div>
         <div class="flex justify-center">
             <div id="card-container-blog" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pt-10">
@@ -126,8 +147,8 @@
         </div>
     </section>
 
-     <!-- Contact Us -->
-     <section class="bg-[#212121]">
+    <!-- Contact Us -->
+    <section class="bg-[#212121]">
         <div class="container mx-auto py-16">
             <div class="row">
                 <div class="flex flex-col items-center text-center ">
@@ -184,81 +205,82 @@
 
 
 
-    <!-- footer  -->
-    <footer class=" bg-[#242424]  text-center text-white pt-10 pb-4">
-        <div class="container mx-auto">
-            <div class="row">
-                <div class="grid grid-cols-2">
-                    <div class="">
-                        <img src="images/viraj_logo-removebg-preview 1.png" alt="" class="pb-3">
-                        <div>
-                            <p class="text-start text-[#B8B8B8]">It is a long established fact that a reader will be
-                                distracted by the readable content of a page when looking at its layout. It is a long
-                                established fact that a reader will be distracted by the readable content of a page when
-                                looking at its layout. </p>
-                        </div>
-                    </div>
+   <!-- footer  -->
+   <footer class=" bg-[#242424]  text-center text-white pt-10 pb-4">
+    <div class="container mx-auto">
+        <div class="row">
+            <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 mx-5">
+                <div>
+                    <img src="images/viraj_logo-removebg-preview 1.png" alt="" class="pb-3 mx-auto md:mx-0">
                     <div>
-                        <div class="grid grid-cols-4">
-                            <div class="ps-5">
-                                <h5 class="text-font text-lg text-start">privacy's</h5>
-                                <div class="w-[30px] h-[1px] bg-slate-200 my-2"></div>
-                                <ul class="list-disc pl-6 text-start text-[#B8B8B8]">
-                                    <li>About Us</li>
-                                    <li class="py-3">Terms & Conditions</li>
-                                    <li>Privacy Policy</li>
-                                    <li class="py-3">Refund and Returns</li>
-                                </ul>
-                            </div>
-                            <div class="ps-5">
-                                <h5 class="text-font text-lg text-start">Quick Links</h5>
-                                <div class="w-[30px] h-[1px] bg-slate-200 my-2"></div>
-                                <ul class="list-disc pl-6 text-start text-[#B8B8B8]">
-                                    <li>Facials</li>
-                                    <li class="py-3">Skin</li>
-                                    <li>Hair Colour</li>
-                                    <li class="py-3">Nail Studio</li>
-                                </ul>
-                            </div>
-                            <div class="ps-5">
-                                <h5 class="text-font text-lg text-start">Pages</h5>
-                                <div class="w-[30px] h-[1px] bg-slate-200 my-2"></div>
-                                <ul class="list-disc pl-6 text-start text-[#B8B8B8]">
-                                    <li>Home</li>
-                                    <li class="py-3">About Us</li>
-                                    <li>Gallery</li>
-                                    <li class="py-3">Blog</li>
-                                    <li>Contact Us</li>
+                        <p class="text-center md:text-start text-[#B8B8B8]">It is a long established fact that a
+                            reader will be
+                            distracted by the readable content of a page when looking at its layout. It is a long
+                            established fact that a reader will be distracted by the readable content of a page when
+                            looking at its layout. </p>
+                    </div>
+                </div>
+                <div>
+                    <div class="grid grid-cols-3 md:grid-cols-4 pt-5">
+                        <div class="md:ps-5">
+                            <h5 class="text-font text-lg text-start">privacy's</h5>
+                            <div class="w-[30px] h-[1px] bg-slate-200 my-2"></div>
+                            <ul class="list-disc pl-6 text-start text-[#B8B8B8]">
+                                <li>About Us</li>
+                                <li class="py-3">Terms & Conditions</li>
+                                <li>Privacy Policy</li>
+                                <li class="py-3">Refund and Returns</li>
+                            </ul>
+                        </div>
+                        <div class="md:ps-5">
+                            <h5 class="text-font text-lg text-start">Quick Links</h5>
+                            <div class="w-[30px] h-[1px] bg-slate-200 my-2"></div>
+                            <ul class="list-disc pl-6 text-start text-[#B8B8B8]">
+                                <li>Facials</li>
+                                <li class="py-3">Skin</li>
+                                <li>Hair Colour</li>
+                                <li class="py-3">Nail Studio</li>
+                            </ul>
+                        </div>
+                        <div class="md:ps-5">
+                            <h5 class="text-font text-lg text-start">Pages</h5>
+                            <div class="w-[30px] h-[1px] bg-slate-200 my-2"></div>
+                            <ul class="list-disc pl-6 text-start text-[#B8B8B8]">
+                                <li>Home</li>
+                                <li class="py-3">About Us</li>
+                                <li>Gallery</li>
+                                <li class="py-3">Blog</li>
+                                <li>Contact Us</li>
 
-                                </ul>
-                            </div>
-                            <div class="ps-5">
-                                <h5 class="text-font text-lg text-start">Social Media</h5>
-                                <div class="w-[30px] h-[1px] bg-slate-200 my-2"></div>
-                                <div class="flex">
-                                    <div class="w-[35px] h-[35px] p-1 rounded-full border-[1px] border-gray-100">
-                                        <i class="fa-brands fa-instagram"></i>
-                                    </div>
-                                    <div class="w-[35px] h-[35px] p-1 mx-2 rounded-full border-[1px] border-gray-100">
-                                        <i class="fa-brands fa-facebook-f"></i>
-                                    </div>
-                                    <div class="w-[35px] h-[35px] p-1 rounded-full border-[1px] border-gray-100">
-                                        <i class="fa-brands fa-youtube"></i>
-                                    </div>
+                            </ul>
+                        </div>
+                        <div class="md:ps-5">
+                            <h5 class="text-font text-lg text-start">Social Media</h5>
+                            <div class="w-[30px] h-[1px] bg-slate-200 my-2"></div>
+                            <div class="flex">
+                                <div class="w-[35px] h-[35px] p-1 rounded-full border-[1px] border-gray-100">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </div>
+                                <div class="w-[35px] h-[35px] p-1 mx-2 rounded-full border-[1px] border-gray-100">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </div>
+                                <div class="w-[35px] h-[35px] p-1 rounded-full border-[1px] border-gray-100">
+                                    <i class="fa-brands fa-youtube"></i>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-
             </div>
+
+
         </div>
-        <div class="border-[0.5px] mt-3"></div>
-        <div class=" text-center py-3">
-            <p class="text-[#B8B8B8] text-sm">Viraj Makeover - All rights reserved - 2023</p>
-        </div>
-    </footer>
+    </div>
+    <div class="border-[0.5px] mt-3"></div>
+    <div class=" text-center py-3">
+        <p class="text-[#B8B8B8] text-sm">Viraj Makeover - All rights reserved - 2023</p>
+    </div>
+</footer>
 
 
 
@@ -266,7 +288,7 @@
     <script src="js/blog.js"></script>
     <script src="js/script.js"></script>
 
-   
+
 </body>
 
 </html>

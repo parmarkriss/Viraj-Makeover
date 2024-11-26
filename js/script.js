@@ -64,12 +64,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
   data.forEach((item, index) => {
     const card = document.createElement("div");
-    card.className = "shadow-md rounded-lg overflow-hidden";
-
+    
+    // Dynamically add the "hidden" class for cards after the first on mobile
+    const isHiddenOnMobile = index > 0 ? "hidden sm:block" : "";
+  
+    card.className = `shadow-md rounded-lg overflow-hidden ${isHiddenOnMobile}`;
+  
     const isGreen = index === 0; 
-
+  
     card.innerHTML = `
-      <div class="max-w-md  bg-[#242424] border border-gray-200 rounded-lg shadow-md overflow-hidden">
+      <div class="max-w-md md:max-w-sm xl:max-w-xl bg-[#242424] border border-gray-200 rounded-lg shadow-md overflow-hidden">
         <div class="relative">
           <img 
             class="w-full h-56 object-cover" 
@@ -91,7 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <a 
               href="${item.link}" 
               class="inline-block text-sm font-medium ${
-                isGreen ? ' text-[#009746]' : ' text-white'
+                isGreen ? 'text-[#009746]' : 'text-white'
               } rounded-lg transition">
               Read More <i class="fa-solid fa-arrow-right"></i>
             </a>
@@ -102,6 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
     cardContainer.appendChild(card);
   });
+  
 });
 
 
@@ -116,7 +121,12 @@ const cardsData = [
   { image: 'images/Rectangle 4347.png', title: 'Groom Makeup', link: 'productdetails.html' },
   { image: 'images/Rectangle 4346.png', title: 'Sider Makeup', link: 'productdetails.html' },
   { image: 'images/Rectangle 4345.png', title: 'Reception Makeup', link: 'productdetails.html' },
-  { image: 'images/Rectangle 4342.png', title: 'Skin Treatment', link: 'productdetails.html' }
+  { image: 'images/Rectangle 4342.png', title: 'Skin Treatment', link: 'productdetails.html' },
+  { image: 'images/Rectangle 4343.png', title: 'Hair Texture', link: 'productdetails.html' },
+  { image: 'images/Rectangle 4344.png', title: 'Bridal Makeup', link: 'productdetails.html' },
+  { image: 'images/Rectangle 4342.png', title: 'Pure Facial', link: 'productdetails.html' },
+  { image: 'images/Rectangle 4348.png', title: 'Exhibition In Surat', link: 'productdetails.html' },
+  { image: 'images/Rectangle 4341.png', title: 'Hair Colour', link: 'productdetails.html' },
 ];
 
 const cardsPerPage = 8; // Number of cards per page
@@ -138,7 +148,7 @@ function renderCards(page) {
       <div class="shadow-lg rounded-lg overflow-hidden p-3 border-[1px]">
         <img src="${data.image}" alt="${data.title}" class="w-full h-56 rounded-md object-cover bg-center">
         <div class="flex justify-between items-center p-4">
-          <h3 class="text-lg font-bold mb-2">${data.title}</h3>
+          <h3 class="text-lg font-bold mb-2 text-white font">${data.title}</h3>
           <div>
             <a href="${data.link}" class="bg-[#009746] text-white px-6 py-3 rounded-full hover:bg-green-600 transition font">
               Explore <i class="fa-solid fa-arrow-right"></i>

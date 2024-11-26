@@ -26,23 +26,24 @@
 </head>
 
 <body>
-    <!-- Container -->
-    <header class="bg-[#212121] border-b-2 ">
+    <!-- Header Section (Sticky) -->
+    <header class="bg-[#212121] border-b-2" id="header">
         <div class="container mx-auto">
             <!-- Header Section -->
             <div class="flex items-center justify-between p-4">
                 <!-- Logo -->
-                <div class="flex items-center order-1 md:order-2">
-                    <img src="images/viraj_logo-removebg-preview 1.png" alt="Logo" class="w-14">
+                <div class="relative flex items-center order-1 md:order-2">
+                    <img src="images/viraj_logo-removebg-preview 1.png" alt="Logo" class="w-20">
+                    <img src="images/Group 26 (1).png" alt="" class="absolute top-0 right-[-15px]">
                 </div>
-    
-                <!-- Menu Icon -->
+
+                <!-- Menu Icon (Hamburger) -->
                 <div class="text-white order-2 md:order-1">
                     <button id="menu-toggle">
                         <i class="fa-solid fa-bars text-[24px]"></i>
                     </button>
                 </div>
-    
+
                 <!-- Search & Button -->
                 <div class="hidden md:flex items-center space-x-4 order-3">
                     <!-- Search Icon -->
@@ -55,20 +56,40 @@
                 </div>
             </div>
         </div>
-    
-        <!-- Menu Section (Initially hidden) -->
-        <div id="menu"
-            class="hidden md:bg-[url('images/Rectangle.png')] bg-cover absolute top-22 left-0 w-full h-96 bg-cover bg-center bg-[#212121]  flex items-center justify-center font">
-            <div class="flex flex-col space-y-4 text-white">
-                <a href="index.html" class="text-xl">Home</a>
-                <a href="about.html" class="text-xl">About</a>
-                <a href="product.html" class="text-xl">Product</a>
-                <a href="gallery.html" class="text-xl">Gallery</a>
-                <a href="blog.html" class="text-xl">Blog</a>
-                <a href="contact.html" class="text-xl">Contact Us</a>
+    </header>
+
+    <!-- Menu Section (Initially hidden) -->
+    <div id="menu"
+        class="hidden md:bg-[url('images/Rectangle.png')] absolute top-0 left-0 w-full h-[55%] bg-cover bg-center bg-[#212121] z-50 transform transition-all duration-500 ease-in-out">
+        <div class="container mx-auto">
+            <div class="row">
+                <div class="pt-5">
+                    <!-- Top Section: Logo and Close Button -->
+                    <div class="flex justify-between items-center md:justify-between">
+                        <!-- Logo: Hidden on mobile, visible on medium and larger screens -->
+                        <img src="images/viraj_logo-removebg-preview 1.png" alt="Logo" class="w-20 hidden md:block">
+
+                        <!-- Close Button: Visible on all screen sizes, aligned to the end on mobile -->
+                        <button id="close-menu"
+                            class="text-white text-2xl w-12 h-12 bg-gradient-to-r from-[#fefefe7a] to-[#f1f1f17b] rounded-full flex justify-center items-center ml-auto md:ml-0">
+                            <i class="fa-solid fa-times"></i>
+                        </button>
+                    </div>
+
+
+                    <!-- Navigation Links -->
+                    <ul class="flex flex-col space-y-4 text-white font text-center ">
+                        <li><a href="index.html" class="text-2xl nav-link">Home</a></li>
+                        <li><a href="about.html" class="text-2xl nav-link">About Us</a></li>
+                        <li><a href="product.html" class="text-2xl nav-link">Products</a></li>
+                        <li><a href="gallery.html" class="text-2xl nav-link">Gallery</a></li>
+                        <li><a href="blog.html" class="text-2xl nav-link">Blog</a></li>
+                        <li><a href="contact.html" class="text-2xl nav-link">Contact Us</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </header>
+    </div>
 
 
     <!-- about us  -->

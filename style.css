@@ -28,4 +28,8 @@
     color: #fff;  /* Change color on hover */
 }
 
+.slick-arrow {
+    display: none !important;
+  }
+
 

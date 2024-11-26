@@ -36,17 +36,18 @@
 </head>
 
 <body>
-    <!-- Container -->
-    <header class="bg-[#212121] border-b-2 ">
+    <!-- Header Section (Sticky) -->
+    <header class="bg-[#212121] border-b-2" id="header">
         <div class="container mx-auto">
             <!-- Header Section -->
             <div class="flex items-center justify-between p-4">
                 <!-- Logo -->
-                <div class="flex items-center order-1 md:order-2">
-                    <img src="images/viraj_logo-removebg-preview 1.png" alt="Logo" class="w-14">
+                <div class="relative flex items-center order-1 md:order-2">
+                    <img src="images/viraj_logo-removebg-preview 1.png" alt="Logo" class="w-20">
+                    <img src="images/Group 26 (1).png" alt="" class="absolute top-0 right-[-15px]">
                 </div>
 
-                <!-- Menu Icon -->
+                <!-- Menu Icon (Hamburger) -->
                 <div class="text-white order-2 md:order-1">
                     <button id="menu-toggle">
                         <i class="fa-solid fa-bars text-[24px]"></i>
@@ -65,20 +66,40 @@
                 </div>
             </div>
         </div>
+    </header>
 
-        <!-- Menu Section (Initially hidden) -->
-        <div id="menu"
-            class="hidden md:bg-[url('images/Rectangle.png')] absolute top-22 left-0 w-full h-96 bg-cover bg-center bg-[#212121]  flex items-center justify-center font">
-            <div class="flex flex-col space-y-4 text-white">
-                <a href="index.html" class="text-xl nav-link">Home</a>
-                <a href="about.html" class="text-xl nav-link">About</a>
-                <a href="product.html" class="text-xl nav-link">Product</a>
-                <a href="gallery.html" class="text-xl nav-link">Gallery</a>
-                <a href="blog.html" class="text-xl nav-link">Blog</a>
-                <a href="contact.html" class="text-xl nav-link">Contact Us</a>
+    <!-- Menu Section (Initially hidden) -->
+    <div id="menu"
+        class="hidden md:bg-[url('images/Rectangle.png')] absolute top-0 left-0 w-full h-[55%] bg-cover bg-center bg-[#212121] z-50 transform transition-all duration-500 ease-in-out">
+        <div class="container mx-auto">
+            <div class="row">
+                <div class="pt-5">
+                    <!-- Top Section: Logo and Close Button -->
+                    <div class="flex justify-between items-center md:justify-between">
+                        <!-- Logo: Hidden on mobile, visible on medium and larger screens -->
+                        <img src="images/viraj_logo-removebg-preview 1.png" alt="Logo" class="w-20 hidden md:block">
+
+                        <!-- Close Button: Visible on all screen sizes, aligned to the end on mobile -->
+                        <button id="close-menu"
+                            class="text-white text-2xl w-12 h-12 bg-gradient-to-r from-[#fefefe7a] to-[#f1f1f17b] rounded-full flex justify-center items-center ml-auto md:ml-0">
+                            <i class="fa-solid fa-times"></i>
+                        </button>
+                    </div>
+
+
+                    <!-- Navigation Links -->
+                    <ul class="flex flex-col space-y-4 text-white font text-center ">
+                        <li><a href="index.html" class="text-2xl nav-link">Home</a></li>
+                        <li><a href="about.html" class="text-2xl nav-link">About Us</a></li>
+                        <li><a href="product.html" class="text-2xl nav-link">Products</a></li>
+                        <li><a href="gallery.html" class="text-2xl nav-link">Gallery</a></li>
+                        <li><a href="blog.html" class="text-2xl nav-link">Blog</a></li>
+                        <li><a href="contact.html" class="text-2xl nav-link">Contact Us</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </header>
+    </div>
 
 
     <!-- about us  -->
@@ -88,9 +109,9 @@
             <div class="row">
                 <div>
                     <img src="images/Vector 1 (1).png" alt=""
-                        class="top-[25%] absolute sm:left-[10%] md:left-[15%] lg:left-[12%]">
+                        class="top-[25%] w-28 lg:w-40 absolute  md:left-[10%] lg:left-[12%]">
                     <h1
-                        class="uppercase text-[50px] sm:text-[60px] md:text-[70px] lg:text-[80px] font font-bold text-white absolute sm:left-[10%] md:left-[12%] lg:left-[15%] sm:top-[25%] md:top-[30%] lg:top-[35%]">
+                        class="uppercase text-[28px] md:text-[48px] lg:text-[80px] font font-bold text-white absolute left-[10%] md:left-[13%] lg:left-[15%] top-[35%] md:top-[30%] lg:top-[35%]">
                         About Us
                     </h1>
                 </div>
@@ -100,15 +121,15 @@
             <img src="images/Rectangle 6.png" alt="" class="w-full">
 
             <div
-                class="absolute w-[35px] h-[35px] p-1 rounded-full border-[1px] border-gray-100 sm:top-[15%] md:top-[18%] lg:top-[18%] left-5 text-center">
+                class="absolute w-[35px] h-[35px] p-1 rounded-full border-[1px] border-gray-100 top-[16%] left-4 md:top-[18%] lg:top-[18%]  text-center">
                 <a href=""><i class="fa-brands fa-instagram text-white"></i></a>
             </div>
             <div
-                class="absolute w-[35px] h-[35px] p-1 rounded-full border-[1px] border-gray-100 sm:top-[35%] md:top-[45%] lg:top-[45%] left-5 text-center">
+                class="absolute w-[35px] h-[35px] p-1 rounded-full border-[1px] border-gray-100 top-[43%] left-4 md:top-[41.5%] lg:top-[45%]  text-center">
                 <a href=""><i class="fa-brands fa-facebook-f text-white"></i></a>
             </div>
             <div
-                class="absolute w-[35px] h-[35px] p-1 rounded-full border-[1px] border-gray-100 sm:top-[55%] md:top-[60%] lg:top-[70%] left-5 text-center">
+                class="absolute w-[35px] h-[35px] p-1 rounded-full border-[1px] border-gray-100 top-[70%] left-4 md:top-[66%] lg:top-[70%]  text-center">
                 <a href=""><i class="fa-brands fa-youtube text-white"></i></a>
             </div>
         </div>
@@ -118,15 +139,15 @@
     <section class="bg-[#212121] py-16">
         <div class="container mx-auto">
             <div class="row">
-                <div class="grid grid-cols-2">
-                    <div class="flex justify-center items-center">
-                        <img src="images/Group 1000004497.png" alt="" class="w-[500px]">
+                <div class="grid grid-cols-1 lg:grid-cols-2">
+                    <div class="flex justify-center items-center order-2 lg:order-1">
+                        <img src="images/Group 1000004497.png" alt="" class="w-[400px] lg:w-[500px]">
                     </div>
 
-                    <div class="relative text-start">
+                    <div class="relative text-start order-1 p-4 lg:order-2">
                         <img src="images/Group 1000004492.png" alt="" class="absolute right-0 top-[60px]">
                         <div class="flex items-center">
-                            <h1 class="font text-[48px] font-bold text-white">
+                            <h1 class="font text-[32px] md:text-[48px] font-bold text-white">
                                 Natural is <span class="text-[#009746]">Better</span>
                             </h1>
                             <img src="images/Section.png" alt="Section Icon" class="w-10 h-10 ps-2">
@@ -156,9 +177,9 @@
 
     <!-- history -->
     <section class="bg-[#212121]">
-        <div class="container mx-auto py-16">
+        <div class="container mx-auto md:py-16">
             <div class="flex items-center justify-center">
-                <h1 class="font text-[48px] font-bold text-white ">
+                <h1 class="font text-[32px] md:text-[48px] font-bold text-white ">
                     Our <span class="text-[#009746]">History</span>
                 </h1>
                 <img src="images/Section.png" alt="Section Icon" class="w-10 h-10 ps-2">
@@ -182,23 +203,23 @@
     <section class="bg-[#212121]">
         <div class="container mx-auto py-20">
             <div class="flex items-center justify-center">
-                <h1 class="font text-[48px] font-bold text-white ">
+                <h1 class="font text-[32px] md:text-[48px] font-bold text-white ">
                     Our <span class="text-[#009746]">Mission & Vision</span>
                 </h1>
                 <img src="images/Section.png" alt="Section Icon" class="w-10 h-10 ps-2">
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-[40%,60%] pt-10">
+            <div class="grid grid-cols-1 lg:grid-cols-[40%,60%] md:pt-10">
                 <!-- First Column (40%) -->
-                <div class="flex justify-end items-center">
+                <div class="flex justify-center items-center">
                     <div class="flex">
                         <img src="images/Group 1000004582.png" alt="" class="w-[350px]">
-                        <img src="images/Group 1000004583.png" alt="" class="w-[100px]">
+                        <img src="images/Group 1000004583.png" alt="" class="w-[100px] hidden xl:block">
                     </div>
                 </div>
                 <!-- Second Column (60%) -->
                 <div>
-                    <div class="text-start">
+                    <div class="text-start p-4">
                         <h2 class="text-[24px] font text-white">Our Mission</h2>
                         <p class="text-font text-[#B8B8B8] pt-2">There are many variations of passages of Lorem Ipsum
                             available, but the majority have suffered <br>alteration in some form, by injected humour,
@@ -212,7 +233,7 @@
                             humour, or randomised words which don't look even slightly <br>believable. If you are going
                             to use a passage of Lorem Ipsum,</p>
                     </div>
-                    <div class="text-start ">
+                    <div class="text-start p-4">
                         <h2 class="text-[24px] font text-white pt-10">Our Values</h2>
                         <p class="text-font text-[#B8B8B8] pt-2">There are many variations of passages of Lorem Ipsum
                             available, but the majority have suffered <br>alteration in some form, by injected humour,
@@ -242,7 +263,7 @@
 
             <!-- Heading Positioned Above Both Images -->
             <h1 class="absolute left-[50%] top-[50%] transform -translate-x-1/2 -translate-y-1/2 
-                sm:text-[30px] md:text-[50px] lg:text-[52px] font-bold font text-white text-center">
+                text-[24px] md:text-[50px] lg:text-[52px] font-bold font text-white text-center">
                 We Give Always Best <br class="sm:hidden"> Services Provide
             </h1>
         </div>
@@ -354,8 +375,8 @@
                             </div>
                         </div>
 
-                        
-                        
+
+
                     </div>
                 </div>
             </div>
@@ -367,19 +388,20 @@
     <footer class=" bg-[#242424]  text-center text-white pt-10 pb-4">
         <div class="container mx-auto">
             <div class="row">
-                <div class="grid grid-cols-2">
-                    <div class="">
-                        <img src="images/viraj_logo-removebg-preview 1.png" alt="" class="pb-3">
+                <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 mx-5">
+                    <div>
+                        <img src="images/viraj_logo-removebg-preview 1.png" alt="" class="pb-3 mx-auto md:mx-0">
                         <div>
-                            <p class="text-start text-[#B8B8B8]">It is a long established fact that a reader will be
+                            <p class="text-center md:text-start text-[#B8B8B8]">It is a long established fact that a
+                                reader will be
                                 distracted by the readable content of a page when looking at its layout. It is a long
                                 established fact that a reader will be distracted by the readable content of a page when
                                 looking at its layout. </p>
                         </div>
                     </div>
                     <div>
-                        <div class="grid grid-cols-4">
-                            <div class="ps-5">
+                        <div class="grid grid-cols-3 md:grid-cols-4 pt-5">
+                            <div class="md:ps-5">
                                 <h5 class="text-font text-lg text-start">privacy's</h5>
                                 <div class="w-[30px] h-[1px] bg-slate-200 my-2"></div>
                                 <ul class="list-disc pl-6 text-start text-[#B8B8B8]">
@@ -389,7 +411,7 @@
                                     <li class="py-3">Refund and Returns</li>
                                 </ul>
                             </div>
-                            <div class="ps-5">
+                            <div class="md:ps-5">
                                 <h5 class="text-font text-lg text-start">Quick Links</h5>
                                 <div class="w-[30px] h-[1px] bg-slate-200 my-2"></div>
                                 <ul class="list-disc pl-6 text-start text-[#B8B8B8]">
@@ -399,7 +421,7 @@
                                     <li class="py-3">Nail Studio</li>
                                 </ul>
                             </div>
-                            <div class="ps-5">
+                            <div class="md:ps-5">
                                 <h5 class="text-font text-lg text-start">Pages</h5>
                                 <div class="w-[30px] h-[1px] bg-slate-200 my-2"></div>
                                 <ul class="list-disc pl-6 text-start text-[#B8B8B8]">
@@ -411,7 +433,7 @@
 
                                 </ul>
                             </div>
-                            <div class="ps-5">
+                            <div class="md:ps-5">
                                 <h5 class="text-font text-lg text-start">Social Media</h5>
                                 <div class="w-[30px] h-[1px] bg-slate-200 my-2"></div>
                                 <div class="flex">
@@ -443,7 +465,7 @@
 
 
     <script src="js/script.js"></script>
-    
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script type="text/javascript">

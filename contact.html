@@ -26,23 +26,24 @@
 </head>
 
 <body>
-    <!-- Container -->
-    <header class="bg-[#212121] border-b-2 ">
+    <!-- Header Section (Sticky) -->
+    <header class="bg-[#212121] border-b-2" id="header">
         <div class="container mx-auto">
             <!-- Header Section -->
             <div class="flex items-center justify-between p-4">
                 <!-- Logo -->
-                <div class="flex items-center order-1 md:order-2">
-                    <img src="images/viraj_logo-removebg-preview 1.png" alt="Logo" class="w-14">
+                <div class="relative flex items-center order-1 md:order-2">
+                    <img src="images/viraj_logo-removebg-preview 1.png" alt="Logo" class="w-20">
+                    <img src="images/Group 26 (1).png" alt="" class="absolute top-0 right-[-15px]">
                 </div>
-    
-                <!-- Menu Icon -->
+
+                <!-- Menu Icon (Hamburger) -->
                 <div class="text-white order-2 md:order-1">
                     <button id="menu-toggle">
                         <i class="fa-solid fa-bars text-[24px]"></i>
                     </button>
                 </div>
-    
+
                 <!-- Search & Button -->
                 <div class="hidden md:flex items-center space-x-4 order-3">
                     <!-- Search Icon -->
@@ -55,20 +56,41 @@
                 </div>
             </div>
         </div>
-    
-        <!-- Menu Section (Initially hidden) -->
-        <div id="menu"
-            class="hidden md:bg-[url('images/Rectangle.png')] bg-cover absolute top-22 left-0 w-full h-96 bg-cover bg-center bg-[#212121]  flex items-center justify-center font">
-            <div class="flex flex-col space-y-4 text-white">
-                <a href="index.html" class="text-xl">Home</a>
-                <a href="about.html" class="text-xl">About</a>
-                <a href="product.html" class="text-xl">Product</a>
-                <a href="gallery.html" class="text-xl">Gallery</a>
-                <a href="blog.html" class="text-xl">Blog</a>
-                <a href="contact.html" class="text-xl">Contact Us</a>
+    </header>
+
+    <!-- Menu Section (Initially hidden) -->
+    <div id="menu"
+        class="hidden md:bg-[url('images/Rectangle.png')] absolute top-0 left-0 w-full h-[55%] bg-cover bg-center bg-[#212121] z-50 transform transition-all duration-500 ease-in-out">
+        <div class="container mx-auto">
+            <div class="row">
+                <div class="pt-5">
+                    <!-- Top Section: Logo and Close Button -->
+                    <div class="flex justify-between items-center md:justify-between">
+                        <!-- Logo: Hidden on mobile, visible on medium and larger screens -->
+                        <img src="images/viraj_logo-removebg-preview 1.png" alt="Logo" class="w-20 hidden md:block">
+
+                        <!-- Close Button: Visible on all screen sizes, aligned to the end on mobile -->
+                        <button id="close-menu"
+                            class="text-white text-2xl w-12 h-12 bg-gradient-to-r from-[#fefefe7a] to-[#f1f1f17b] rounded-full flex justify-center items-center ml-auto md:ml-0">
+                            <i class="fa-solid fa-times"></i>
+                        </button>
+                    </div>
+
+                 <!-- Navigation Links -->
+                    <ul class="flex flex-col space-y-4 text-white font text-center ">
+                        <li><a href="index.html" class="text-2xl nav-link">Home</a></li>
+                        <li><a href="about.html" class="text-2xl nav-link">About Us</a></li>
+                        <li><a href="product.html" class="text-2xl nav-link">Products</a></li>
+                        <li><a href="gallery.html" class="text-2xl nav-link">Gallery</a></li>
+                        <li><a href="blog.html" class="text-2xl nav-link">Blog</a></li>
+                        <li><a href="contact.html" class="text-2xl nav-link">Contact Us</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </header>
+
+        
+    </div>
 
     <!-- gallery  -->
     <section class="relative bg-[url('images/about.png')] h-[550px] bg-cover bg-center flex items-center -z-10">
@@ -145,18 +167,22 @@
                 </div>
 
                 <div class="grid grid-cols-3 gap-4 mt-5">
-                    <div class="p-5 border-l border-r border-b border-t-0 rounded-lg" style="border: 0.5px solid; border-image-source: linear-gradient(357.33deg, #FEFEFE 0.9%, rgba(254, 254, 254, 0) 96.46%); border-image-slice: 1;">
+                    <div class="p-5 border-l border-r border-b border-t-0 rounded-lg"
+                        style="border: 0.5px solid; border-image-source: linear-gradient(357.33deg, #FEFEFE 0.9%, rgba(254, 254, 254, 0) 96.46%); border-image-slice: 1;">
                         <i class="fa-solid fa-location-dot text-white pe-3"></i>
-                        <span class="text-[22px] text-[#B8B8B8] text-font">211, The Grand Plaza, VIP Road, Vesu, Surat, Gujarat 395007</span>
+                        <span class="text-[22px] text-[#B8B8B8] text-font">211, The Grand Plaza, VIP Road, Vesu, Surat,
+                            Gujarat 395007</span>
                     </div>
 
-                    <div class="p-5 border-l border-r border-b border-t-0 rounded-lg text-center flex  items-center justify-center" style="border: 0.5px solid; border-image-source: linear-gradient(357.33deg, #FEFEFE 0.9%, rgba(254, 254, 254, 0) 96.46%); border-image-slice: 1;">
+                    <div class="p-5 border-l border-r border-b border-t-0 rounded-lg text-center flex  items-center justify-center"
+                        style="border: 0.5px solid; border-image-source: linear-gradient(357.33deg, #FEFEFE 0.9%, rgba(254, 254, 254, 0) 96.46%); border-image-slice: 1;">
                         <i class="fa-solid fa-phone-volume text-white text-xl pe-3"></i>
                         <span class="text-[22px] text-[#B8B8B8] text-font">08048128938</span>
                     </div>
-                    
 
-                    <div class="p-5 border-l border-r border-b border-t-0 rounded-lg text-center flex  items-center justify-center" style="border: 0.5px solid; border-image-source: linear-gradient(357.33deg, #FEFEFE 0.9%, rgba(254, 254, 254, 0) 96.46%); border-image-slice: 1;">
+
+                    <div class="p-5 border-l border-r border-b border-t-0 rounded-lg text-center flex  items-center justify-center"
+                        style="border: 0.5px solid; border-image-source: linear-gradient(357.33deg, #FEFEFE 0.9%, rgba(254, 254, 254, 0) 96.46%); border-image-slice: 1;">
                         <i class="fa-solid fa-envelope text-white text-xl pe-3"></i>
                         <span class="text-[22px] text-[#B8B8B8] text-font"> purefamilysalon@gmail.com</span>
                     </div>
@@ -170,19 +196,20 @@
     <footer class=" bg-[#242424]  text-center text-white pt-10 pb-4">
         <div class="container mx-auto">
             <div class="row">
-                <div class="grid grid-cols-2">
-                    <div class="">
-                        <img src="images/viraj_logo-removebg-preview 1.png" alt="" class="pb-3">
+                <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 mx-5">
+                    <div>
+                        <img src="images/viraj_logo-removebg-preview 1.png" alt="" class="pb-3 mx-auto md:mx-0">
                         <div>
-                            <p class="text-start text-[#B8B8B8]">It is a long established fact that a reader will be
+                            <p class="text-center md:text-start text-[#B8B8B8]">It is a long established fact that a
+                                reader will be
                                 distracted by the readable content of a page when looking at its layout. It is a long
                                 established fact that a reader will be distracted by the readable content of a page when
                                 looking at its layout. </p>
                         </div>
                     </div>
                     <div>
-                        <div class="grid grid-cols-4">
-                            <div class="ps-5">
+                        <div class="grid grid-cols-3 md:grid-cols-4 pt-5">
+                            <div class="md:ps-5">
                                 <h5 class="text-font text-lg text-start">privacy's</h5>
                                 <div class="w-[30px] h-[1px] bg-slate-200 my-2"></div>
                                 <ul class="list-disc pl-6 text-start text-[#B8B8B8]">
@@ -192,7 +219,7 @@
                                     <li class="py-3">Refund and Returns</li>
                                 </ul>
                             </div>
-                            <div class="ps-5">
+                            <div class="md:ps-5">
                                 <h5 class="text-font text-lg text-start">Quick Links</h5>
                                 <div class="w-[30px] h-[1px] bg-slate-200 my-2"></div>
                                 <ul class="list-disc pl-6 text-start text-[#B8B8B8]">
@@ -202,7 +229,7 @@
                                     <li class="py-3">Nail Studio</li>
                                 </ul>
                             </div>
-                            <div class="ps-5">
+                            <div class="md:ps-5">
                                 <h5 class="text-font text-lg text-start">Pages</h5>
                                 <div class="w-[30px] h-[1px] bg-slate-200 my-2"></div>
                                 <ul class="list-disc pl-6 text-start text-[#B8B8B8]">
@@ -214,7 +241,7 @@
 
                                 </ul>
                             </div>
-                            <div class="ps-5">
+                            <div class="md:ps-5">
                                 <h5 class="text-font text-lg text-start">Social Media</h5>
                                 <div class="w-[30px] h-[1px] bg-slate-200 my-2"></div>
                                 <div class="flex">
