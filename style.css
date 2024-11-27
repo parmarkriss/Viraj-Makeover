@@ -32,6 +32,22 @@
     display: none !important;
   }
 
-
+/* Normal state */
+.slick-dots li button::before {
+    margin-top: 10px!important;
+    font-size: 14px!important; 
+    color: white!important; 
+  }
+  
+  
+  .slick-dots li button:hover::before {
+    color: black;
+  }
+  
+  /* Active state (current slide) */
+  .slick-dots li.slick-active button::before {
+    color: red; 
+  }
+  
 
 
