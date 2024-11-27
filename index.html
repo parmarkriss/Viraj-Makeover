@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Viraj Makeover</title>
+    <link rel="shortcut icon" href="images/viraj_logo-removebg-preview 1.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
         integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -48,7 +49,7 @@
                 <div class="hidden md:flex items-center space-x-4 order-3">
                     <!-- Search Icon -->
                     <button>
-                        <i class="fa-solid fa-magnifying-glass w-6 h-6 text-white"></i>
+                        <i class="fa-solid fa-magnifying-glass  text-white text-xl"></i>
                     </button>
                     <a href="#" class="bg-[#009746] text-white px-4 py-2 rounded-full hover:bg-green-600 transition">
                         Get A Quote →
@@ -59,24 +60,24 @@
     </header>
 
     <!-- Menu Section (Initially hidden) -->
-    <div id="menu" class="hidden md:bg-[url('images/Rectangle.png')] absolute top-0 left-0 w-full h-[58%] bg-cover bg-center bg-[#212121] z-50 transform transition-all duration-500 ease-in-out">
+    <div id="menu" class="hidden md:bg-[url('images/Rectangle.png')] absolute top-0 left-0 w-full h-full bg-cover bg-center bg-[#212121] z-50 transform transition-all duration-500 ease-in-out">
         <div class="container mx-auto">
             <div class="row">
-                <div class="pt-5">
+                <div class="pt-10">
                 
                     <div class="flex justify-between items-center md:justify-between">
                     
-                        <img src="images/viraj_logo-removebg-preview 1.png" alt="Logo" class="w-20 hidden md:block">
+                        <img src="images/viraj_logo-removebg-preview 1.png" alt="Logo" class="w-28 hidden md:block">
 
                         <button id="close-menu"
-                            class="text-white text-2xl w-12 h-12 bg-gradient-to-r from-[#fefefe7a] to-[#f1f1f17b] rounded-full flex justify-center items-center ml-auto md:ml-0">
+                            class="text-white text-2xl w-12 h-12 bg-gradient-to-r from-[#fefefe26] to-[#f1f1f134] rounded-full flex justify-center items-center ml-auto md:ml-0">
                             <i class="fa-solid fa-times"></i>
                         </button>
                     </div>
 
 
                     <!-- Navigation Links -->
-                    <ul class="flex flex-col space-y-4 text-white font text-center ">
+                    <ul class="flex flex-col space-y-5 text-white font text-center mt-[10%]">
                         <li><a href="index.html" class="text-2xl nav-link">Home</a></li>
                         <li><a href="about.html" class="text-2xl nav-link">About Us</a></li>
                         <li><a href="product.html" class="text-2xl nav-link">Products</a></li>
@@ -88,7 +89,7 @@
             </div>
         </div>
 
-        <div class="mt-5 p-6 border-t border-b border-white/10">
+        <div class="mt-[10%] p-6 border-t border-b border-white/10">
             <div class="container mx-auto">
                 <div class="row grid grid-cols-1 md:grid-cols-3 gap-4 text-center text-sm">
                     <div class="flex items-center rounded-lg">
@@ -126,6 +127,7 @@
 
     </div>
 
+    
 
 
 
@@ -618,8 +620,6 @@
                         </div>
                     </div>
                 </div>
-
-
             </div>
         </div>
         <div class="border-[0.5px] mt-3"></div>
@@ -627,8 +627,6 @@
             <p class="text-[#B8B8B8] text-sm">Viraj Makeover - All rights reserved - 2023</p>
         </div>
     </footer>
-
-
 
 
     <script src="js/script.js"></script>
@@ -695,10 +693,8 @@
                     }
                 }
             }
-
             // Run on page load
             toggleSlickSlider();
-
             // Run on window resize
             $(window).on('resize', function () {
                 toggleSlickSlider();
@@ -706,7 +702,5 @@
         });
 
     </script>
-
 </body>
-
 </html>
