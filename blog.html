@@ -28,7 +28,7 @@
 
 <body>
     <!-- Header Section (Sticky) -->
-    <header class="bg-[#212121] border-b-2" id="header">
+    <header class="bg-[#212121] hidden:border-b-2 md:border-b-2 border-[#fefefe3b]" id="header">
         <div class="container mx-auto">
             <!-- Header Section -->
             <div class="flex items-center justify-between p-4">
@@ -60,16 +60,16 @@
     </header>
 
     <!-- Menu Section (Initially hidden) -->
-    <div id="menu" class="hidden md:bg-[url('images/Rectangle.png')] absolute top-0 left-0 w-full h-[75%] md:h-full bg-cover bg-center bg-[#212121] z-50 transform transition-all duration-500 ease-in-out">
+    <div id="menu"
+        class="hidden md:bg-[url('images/Rectangle.png')] absolute top-0 left-0 w-full h-[75%] md:h-full bg-cover bg-center bg-[#212121] z-50 transform transition-all duration-500 ease-in-out">
         <div class="container mx-auto">
             <div class="row">
                 <div class="pt-5 px-4">
                     <div class="flex justify-between items-center md:justify-between">
-                    
+
                         <img src="images/viraj_logo-removebg-preview 1.png" alt="Logo" class="w-20">
 
-                        <button id="close-menu"
-                            class="text-white text-3xl ">
+                        <button id="close-menu" class="text-white text-3xl ">
                             <i class="fa-solid fa-times"></i>
                         </button>
                     </div>
@@ -104,20 +104,22 @@
                     </div>
 
 
-                    <div class="p-5 flex  items-center justify-center"> 
-                        <button class="text-white text-lg w-12 h-12 border rounded-full flex justify-center items-center">
+                    <div class="p-5 flex  items-center justify-center">
+                        <button
+                            class="text-white text-lg w-12 h-12 border rounded-full flex justify-center items-center">
                             <i class="fa-solid fa-phone-volume  text-lg"></i>
                         </button>
-                        
+
                         <span class="text-[22px] text-[#B8B8B8] text-font ms-3">08048128938</span>
                     </div>
 
 
                     <div class="p-5 flex  items-center justify-center">
-                        <button class="text-white text-lg w-12 h-12 border rounded-full flex justify-center items-center">
+                        <button
+                            class="text-white text-lg w-12 h-12 border rounded-full flex justify-center items-center">
                             <i class="fa-solid fa-envelope text-lg"></i>
                         </button>
-                        
+
                         <span class="text-[22px] text-[#B8B8B8] text-font ms-3"> purefamilysalon@gmail.com</span>
                     </div>
                 </div>
@@ -160,18 +162,22 @@
     </section>
 
     <section class="bg-[#212121] py-16">
-        <div class="container mx-auto">
+        <div class="container mx-auto ">
+            
             <div class="row">
-                <div class="flex flex-col md:flex-row items-center justify-center md:space-x-3 space-y-3 md:space-y-0 text-center md:text-left">
+                <div
+                    class="flex flex-col md:flex-row items-center justify-center md:space-x-3 space-y-3 md:space-y-0 text-center md:text-left">
                     <h1 class="font text-[32px] md:text-[48px] font-bold text-white">
                         The Latest <span class="text-[#009746]">Article <br class="block md:hidden"> & News</span>
                     </h1>
                     <img src="images/Section.png" alt="Section Icon" class="w-10 h-10">
                 </div>
-                
+
             </div>
         </div>
-        <div class="flex justify-center">
+        <div class="flex justify-center relative">
+            <img src="images/Group 1000004492.png" alt="" class="absolute right-[8%] top-0 hidden lg:block">
+            
             <div id="card-container-blog" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pt-10">
             </div>
         </div>
@@ -187,14 +193,12 @@
     <section class="bg-[#212121]">
         <div class="container mx-auto py-16">
             <div class="row">
-
                 <div class="flex items-center justify-center space-x-3">
                     <h1 class="font text-[32px] md:text-[48px] font-bold text-white">
                         Contact <span class="text-[#009746]">Us</span>
                     </h1>
                     <img src="images/Section.png" alt="Section Icon" class="w-10 h-10">
                 </div>
-
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 py-10 px-5  gap-3 md:flex md:items-center">
                     <div>
@@ -212,22 +216,20 @@
                             <p class="text-[#B8B8B8] text-font ps-3"> purefamilysalon@gmail.com</p>
                         </div>
                         <img src="images/image.png" alt="" class="pt-8">
-
                     </div>
 
+                    <div class="bg-[url('images/Group.png')] p-10 bg-cover bg-center rounded-xl ">
+                        <input type="text" class="bg-[#393C3F] text-white w-full p-3  rounded-lg" placeholder="Name">
 
-                    <div class="bg-[url('images/Group.png')] p-10 bg-cover bg-center rounded-lg ">
-                        <input type="text" class="bg-[#545569] text-white w-full p-3  rounded-lg" placeholder="Name">
-
-                        <input type="text" class="bg-[#545569] w-full p-3 text-white rounded-lg my-5"
+                        <input type="text" class="bg-[#393C3F] w-full p-3 text-white rounded-lg my-5"
                             placeholder="Email">
 
-                        <input type="text" class="bg-[#545569] w-full p-3 text-white rounded-lg" placeholder="Subject">
+                        <input type="text" class="bg-[#393C3F] w-full p-3 text-white rounded-lg" placeholder="Subject">
 
-                        <textarea class="bg-[#545569] text-white w-full p-3 my-5 rounded-lg" placeholder="Message"
+                        <textarea class="bg-[#393C3F] text-white w-full p-3 my-5 rounded-lg" placeholder="Message"
                             aria-label="Message" rows="10"></textarea>
 
-                        <button class="bg-[#009746] w-full p-3 rounded-full text-white">
+                        <button class="bg-[#009746] hover:bg-[#009746db] w-full p-3 rounded-full text-white">
                             Submit <i class="fa-solid fa-arrow-right"></i>
                         </button>
 
@@ -238,85 +240,82 @@
     </section>
 
 
-
-
-
-   <!-- footer  -->
-   <footer class=" bg-[#242424]  text-center text-white pt-10 pb-4">
-    <div class="container mx-auto">
-        <div class="row">
-            <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 mx-5">
-                <div>
-                    <img src="images/viraj_logo-removebg-preview 1.png" alt="" class="pb-3 mx-auto md:mx-0">
+    <!-- footer  -->
+    <footer class=" bg-[#242424]   text-center text-white pt-10 pb-4">
+        <div class="container mx-auto">
+            <div class="row">
+                <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 mx-5">
                     <div>
-                        <p class="text-center md:text-start text-[#B8B8B8]">It is a long established fact that a
-                            reader will be
-                            distracted by the readable content of a page when looking at its layout. It is a long
-                            established fact that a reader will be distracted by the readable content of a page when
-                            looking at its layout. </p>
+                        <img src="images/viraj_logo-removebg-preview 1.png" alt="" class="pb-3 mx-auto md:mx-0">
+                        <div>
+                            <p class="text-center md:text-start text-[#B8B8B8]">It is a long established fact that a
+                                reader will be
+                                distracted by the readable content of a page when looking at its layout. It is a long
+                                established fact that a reader will be distracted by the readable content of a page when
+                                looking at its layout. </p>
+                        </div>
                     </div>
-                </div>
-                <div>
-                    <div class="grid grid-cols-3 md:grid-cols-4 pt-5">
-                        <div class="md:ps-5">
-                            <h5 class="text-font text-lg text-start">privacy's</h5>
-                            <div class="w-[30px] h-[1px] bg-slate-200 my-2"></div>
-                            <ul class="list-disc pl-6 text-start text-[#B8B8B8]">
-                                <li>About Us</li>
-                                <li class="py-3">Terms & Conditions</li>
-                                <li>Privacy Policy</li>
-                                <li class="py-3">Refund and Returns</li>
-                            </ul>
-                        </div>
-                        <div class="md:ps-5">
-                            <h5 class="text-font text-lg text-start">Quick Links</h5>
-                            <div class="w-[30px] h-[1px] bg-slate-200 my-2"></div>
-                            <ul class="list-disc pl-6 text-start text-[#B8B8B8]">
-                                <li>Facials</li>
-                                <li class="py-3">Skin</li>
-                                <li>Hair Colour</li>
-                                <li class="py-3">Nail Studio</li>
-                            </ul>
-                        </div>
-                        <div class="md:ps-5">
-                            <h5 class="text-font text-lg text-start">Pages</h5>
-                            <div class="w-[30px] h-[1px] bg-slate-200 my-2"></div>
-                            <ul class="list-disc pl-6 text-start text-[#B8B8B8]">
-                                <li>Home</li>
-                                <li class="py-3">About Us</li>
-                                <li>Gallery</li>
-                                <li class="py-3">Blog</li>
-                                <li>Contact Us</li>
+                    <div>
+                        <div class="grid grid-cols-3 md:grid-cols-4 pt-5">
+                            <div class="md:ps-5">
+                                <h5 class="text-font text-lg text-start">privacy's</h5>
+                                <div class="w-[30px] h-[1px] bg-slate-200 my-2"></div>
+                                <ul class="list-disc pl-6 text-start text-[#B8B8B8]">
+                                    <li>About Us</li>
+                                    <li class="py-3">Terms & Conditions</li>
+                                    <li>Privacy Policy</li>
+                                    <li class="py-3">Refund and Returns</li>
+                                </ul>
+                            </div>
+                            <div class="md:ps-5">
+                                <h5 class="text-font text-lg text-start">Quick Links</h5>
+                                <div class="w-[30px] h-[1px] bg-slate-200 my-2"></div>
+                                <ul class="list-disc pl-6 text-start text-[#B8B8B8]">
+                                    <li>Facials</li>
+                                    <li class="py-3">Skin</li>
+                                    <li>Hair Colour</li>
+                                    <li class="py-3">Nail Studio</li>
+                                </ul>
+                            </div>
+                            <div class="md:ps-5">
+                                <h5 class="text-font text-lg text-start">Pages</h5>
+                                <div class="w-[30px] h-[1px] bg-slate-200 my-2"></div>
+                                <ul class="list-disc pl-6 text-start text-[#B8B8B8]">
+                                    <li>Home</li>
+                                    <li class="py-3">About Us</li>
+                                    <li>Gallery</li>
+                                    <li class="py-3">Blog</li>
+                                    <li>Contact Us</li>
 
-                            </ul>
-                        </div>
-                        <div class="md:ps-5">
-                            <h5 class="text-font text-lg text-start">Social Media</h5>
-                            <div class="w-[30px] h-[1px] bg-slate-200 my-2"></div>
-                            <div class="flex">
-                                <div class="w-[35px] h-[35px] p-1 rounded-full border-[1px] border-gray-100">
-                                    <i class="fa-brands fa-instagram"></i>
-                                </div>
-                                <div class="w-[35px] h-[35px] p-1 mx-2 rounded-full border-[1px] border-gray-100">
-                                    <i class="fa-brands fa-facebook-f"></i>
-                                </div>
-                                <div class="w-[35px] h-[35px] p-1 rounded-full border-[1px] border-gray-100">
-                                    <i class="fa-brands fa-youtube"></i>
+                                </ul>
+                            </div>
+                            <div class="md:ps-5">
+                                <h5 class="text-font text-lg text-start">Social Media</h5>
+                                <div class="w-[30px] h-[1px] bg-slate-200 my-2"></div>
+                                <div class="flex">
+                                    <div class="w-[35px] h-[35px] p-1 rounded-full border-[1px] border-gray-100">
+                                        <i class="fa-brands fa-instagram"></i>
+                                    </div>
+                                    <div class="w-[35px] h-[35px] p-1 mx-2 rounded-full border-[1px] border-gray-100">
+                                        <i class="fa-brands fa-facebook-f"></i>
+                                    </div>
+                                    <div class="w-[35px] h-[35px] p-1 rounded-full border-[1px] border-gray-100">
+                                        <i class="fa-brands fa-youtube"></i>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
+
             </div>
-
-
         </div>
-    </div>
-    <div class="border-[0.5px] mt-3"></div>
-    <div class=" text-center py-3">
-        <p class="text-[#B8B8B8] text-sm">Viraj Makeover - All rights reserved - 2023</p>
-    </div>
-</footer>
+        <hr  class=" border-[#fefefe3b]">
+        <div class=" text-center py-3">
+            <p class="text-[#B8B8B8] text-sm">Viraj Makeover - All rights reserved - 2023</p>
+        </div>
+    </footer>
 
 
 

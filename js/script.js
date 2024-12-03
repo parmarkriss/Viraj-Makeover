@@ -75,10 +75,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const isGreen = index === 0; 
   
     card.innerHTML = `
-      <div class="max-w-md md:max-w-sm xl:max-w-xl bg-[#242424] border border-gray-200 rounded-lg shadow-md overflow-hidden ">
+      <div class="max-w-md md:max-w-sm xl:max-w-xl bg-[#242424] border border-[#fefefe3b] rounded-lg shadow-md overflow-hidden ">
         <div class="relative">
           <img 
-            class="w-full h-56 object-cover" 
+            class="w-full h-56 object-cover rounded-lg" 
             src="${item.image}" 
             alt="${item.title}">
           <img 
@@ -147,7 +147,7 @@ function renderCards(page) {
   const currentCards = cardsData.slice(startIndex, endIndex);
   currentCards.forEach(data => {
     const card = `
-      <div class="shadow-lg rounded-lg overflow-hidden p-3 border-[1px]">
+      <div class="shadow-lg rounded-lg overflow-hidden p-3 border-[1px] border-[#fefefe3b]">
         <img src="${data.image}" alt="${data.title}" class="w-full h-56 rounded-md object-cover bg-center">
         <div class="flex justify-between items-center p-4">
           <h3 class="text-lg font-bold mb-2 text-white font">${data.title}</h3>

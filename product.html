@@ -41,7 +41,7 @@
 
 <body>
     <!-- Header Section (Sticky) -->
-    <header class="bg-[#212121] border-b-2" id="header">
+    <header class="bg-[#212121] hidden:border-b-2 md:border-b-2 border-[#fefefe3b]" id="header">
         <div class="container mx-auto">
             <!-- Header Section -->
             <div class="flex items-center justify-between p-4">
@@ -175,20 +175,24 @@
     <section class="bg-[#212121] py-16">
         <div class="container mx-auto">
             <div class="row">
-                <div class="flex flex-col items-center text-center">
+              
+                <div class="relative">
+                    <img src="images/Group 1000004492.png" alt="" class="absolute right-0 top-0 hidden md:block">
                     <div class="flex items-center justify-center space-x-3">
-                        <h1 class="font text-[32px] md:text-[48px] font-bold text-white">
+                        
+                        <h1 class="font text-[32px] md:text-[48px] font-bold text-white pb-4">
                             We Provided <span class="text-[#009746]">Best <br class="block md:hidden">Services</span>
                         </h1>
                         <img src="images/Section.png" alt="Section Icon" class="w-10 h-10">
                     </div>
                 </div>
+
                 <div class="md:flex">
 
                     <!-- Sidebar -->
-                    <aside class="border border-gray-400 mx-2 ">
+                    <aside class="border border-[#fefefe3b] mx-2 ">
                         <h2 class="text-sm font-bold mb-4 px-2 bg-[#3C3C3C] py-2 text-white text-h">Categories</h2>
-                        <ul class="grid grid-cols-6  lg:grid-cols-1  text-[#FEFEFE] px-2">
+                        <ul class="hidden md:block text-[14px] text-[#FEFEFE] px-2">
                             <li><a href="#" class="block  py-1  rounded-md ">All</a></li>
                             <li><a href="#" class="block  py-1 rounded-md ">Surat</a></li>
                             <li><a href="#" class="block py-1 rounded-md ">Nail Studio</a></li>
@@ -215,10 +219,37 @@
                             <li><a href="#" class="block  py-1  rounded-md ">Bridal Makeup</a></li>
                             <li><a href="#" class="block  py-1  rounded-md ">Reception Makeup</a></li>
                             <li><a href="#" class="block  py-1  rounded-md ">Sider Makeup</a></li>
-                            <li><a href="#" class="block  py-1  rounded-md ">Indian Bride Makeup</a></li>
-
-                            
+                            <li><a href="#" class="block  py-1  rounded-md ">Indian Bride Makeup</a></li> 
                         </ul>
+
+                        <div class="md:hidden gap-2">
+                            <button class="px-3 py-1.5 rounded-sm text-sm text-green-400 hover:text-green-300 transition-colors">All</button>
+                            <button class="px-3 py-1.5 rounded-sm text-sm text-white/90 hover:text-white transition-colors">Surat</button>
+                            <button class="px-3 py-1.5 rounded-sm text-sm text-white/90 hover:text-white transition-colors">Nail Studio</button>
+                            <button class="px-3 py-1.5 rounded-sm text-sm text-white/90 hover:text-white transition-colors">Pure Facial</button>
+                            <button class="px-3 py-1.5 rounded-sm text-sm text-white/90 hover:text-white transition-colors">Makeup</button>
+                            <button class="px-3 py-1.5 rounded-sm text-sm text-white/90 hover:text-white transition-colors">Hair Colour</button>
+                            <button class="px-3 py-1.5 rounded-sm text-sm text-white/90 hover:text-white transition-colors">Hair Colours</button>
+                            <button class="px-3 py-1.5 rounded-sm text-sm text-white/90 hover:text-white transition-colors">Hair Texture</button>
+                            <button class="px-3 py-1.5 rounded-sm text-sm text-white/90 hover:text-white transition-colors">Nail</button>
+                            <button class="px-3 py-1.5 rounded-sm text-sm text-white/90 hover:text-white transition-colors">Hair Basic</button>
+                            <button class="px-3 py-1.5 rounded-sm text-sm text-white/90 hover:text-white transition-colors">Hair</button>
+                            <button class="px-3 py-1.5 rounded-sm text-sm text-white/90 hover:text-white transition-colors">Threading</button>
+                            <button class="px-3 py-1.5 rounded-sm text-sm text-white/90 hover:text-white transition-colors">Colour</button>
+                            <button class="px-3 py-1.5 rounded-sm text-sm text-white/90 hover:text-white transition-colors">Hair Texure</button>
+                            <button class="px-3 py-1.5 rounded-sm text-sm text-white/90 hover:text-white transition-colors">Nails Studio</button>
+                            <button class="px-3 py-1.5 rounded-sm text-sm text-white/90 hover:text-white transition-colors">Hair Treatment</button>
+                            <button class="px-3 py-1.5 rounded-sm text-sm text-white/90 hover:text-white transition-colors">Skin</button>
+                            <button class="px-3 py-1.5 rounded-sm text-sm text-white/90 hover:text-white transition-colors">Makeup</button>
+                            <button class="px-3 py-1.5 rounded-sm text-sm text-white/90 hover:text-white transition-colors">Reception Makeup</button>
+                            <button class="px-3 py-1.5 rounded-sm text-sm text-white/90 hover:text-white transition-colors">Hair Treatmeant</button>
+                            <button class="px-3 py-1.5 rounded-sm text-sm text-white/90 hover:text-white transition-colors">Groom And Bride Reception Makeup</button>
+                            <button class="px-3 py-1.5 rounded-sm text-sm text-white/90 hover:text-white transition-colors">Siders Makeup</button>
+                            <button class="px-3 py-1.5 rounded-sm text-sm text-white/90 hover:text-white transition-colors">Bridal Makeup</button>
+                            <button class="px-3 py-1.5 rounded-sm text-sm text-white/90 hover:text-white transition-colors">Sider Makeup</button>
+                            <button class="px-3 py-1.5 rounded-sm text-sm text-white/90 hover:text-white transition-colors">Reception Makeup</button>
+                            <button class="px-3 py-1.5 rounded-sm text-sm text-white/90 hover:text-white transition-colors">Indian Bride Makeup</button>
+                          </div>
                     </aside>
 
 
@@ -307,7 +338,7 @@
 
             </div>
         </div>
-        <div class="border-[0.5px] mt-3"></div>
+        <hr  class=" border-[#fefefe3b]">
         <div class=" text-center py-3">
             <p class="text-[#B8B8B8] text-sm">Viraj Makeover - All rights reserved - 2023</p>
         </div>

@@ -28,7 +28,7 @@
 
 <body>
     <!-- Header Section (Sticky) -->
-    <header class="bg-[#212121] border-b-2" id="header">
+    <header class="bg-[#212121] hidden:border-b-2 md:border-b-2 border-[#fefefe3b]" id="header">
         <div class="container mx-auto">
             <!-- Header Section -->
             <div class="flex items-center justify-between p-4">
@@ -183,20 +183,21 @@
                     </div>
 
                     <!-- Form Container (Second Column) -->
-                    <div class="bg-[url('images/Group.png')]  p-10 bg-cover bg-center rounded-lg">
-                        <input type="text" class="bg-[#545569] text-white w-full p-3  rounded-lg" placeholder="Name">
+                    <div class="bg-[url('images/Group.png')] p-10 bg-cover bg-center rounded-xl ">
+                        <input type="text" class="bg-[#393C3F] text-white w-full p-3  rounded-lg" placeholder="Name">
 
-                        <input type="text" class="bg-[#545569] w-full p-3 text-white rounded-lg my-5"
+                        <input type="text" class="bg-[#393C3F] w-full p-3 text-white rounded-lg my-5"
                             placeholder="Email">
 
-                        <input type="text" class="bg-[#545569] w-full p-3 text-white rounded-lg" placeholder="Subject">
+                        <input type="text" class="bg-[#393C3F] w-full p-3 text-white rounded-lg" placeholder="Subject">
 
-                        <textarea class="bg-[#545569] text-white w-full p-3 my-5 rounded-lg" placeholder="Message"
+                        <textarea class="bg-[#393C3F] text-white w-full p-3 my-5 rounded-lg" placeholder="Message"
                             aria-label="Message" rows="10"></textarea>
 
-                        <button class="bg-[#009746] w-full p-3 rounded-full text-white">
+                        <button class="bg-[#009746] hover:bg-[#009746db] w-full p-3 rounded-full text-white">
                             Submit <i class="fa-solid fa-arrow-right"></i>
                         </button>
+
                     </div>
                 </div>
 
@@ -297,7 +298,7 @@
 
             </div>
         </div>
-        <div class="border-[0.5px] mt-3"></div>
+        <hr  class=" border-[#fefefe3b]">
         <div class=" text-center py-3">
             <p class="text-[#B8B8B8] text-sm">Viraj Makeover - All rights reserved - 2023</p>
         </div>
