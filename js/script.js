@@ -162,34 +162,57 @@ function renderCards(page) {
   });
 }
 
-// Function to render pagination controls
 function renderPagination() {
   paginationControls.innerHTML = ''; // Clear previous controls
   const totalPages = Math.ceil(cardsData.length / cardsPerPage);
 
-  for (let i = 1; i <= totalPages; i++) {
-    const button = document.createElement('button');
-    button.textContent = i;
-    button.className = `px-4 py-2 rounded ${
-      i === currentPage
-        ? 'bg-blue-500 text-white'
-        : 'bg-gray-200 text-gray-800 hover:bg-gray-300'
-    }`;
-
-    // Add click event to change page
-    button.addEventListener('click', () => {
-      currentPage = i;
+  // Create "Previous" button
+  const prevButton = document.createElement('button');
+  prevButton.innerHTML = '<i class="fa-solid fa-chevron-left text-[23px]"></i>'; // Using Font Awesome icon
+  prevButton.className = `px-4 py-2 rounded ${
+    currentPage === 1
+      ? 'text-[#FEFEFE] cursor-not-allowed'
+      : ' text-[#FEFEFE]'
+  }`;
+  prevButton.addEventListener('click', () => {
+    if (currentPage > 1) {
+      currentPage--;
       renderCards(currentPage);
       renderPagination();
-    });
+    }
+  });
+  paginationControls.appendChild(prevButton);
 
-    paginationControls.appendChild(button);
-  }
+  // Display current page / total pages (e.g., 01 / 02)
+  const pageDisplay = document.createElement('span');
+  pageDisplay.className = 'px-4 py-2 text-[22px] text-[#FEFEFE]';
+  pageDisplay.textContent = `${String(currentPage).padStart(2, '0')} / ${String(totalPages).padStart(2, '0')}`;
+  paginationControls.appendChild(pageDisplay);
+
+  // Create "Next" button
+  const nextButton = document.createElement('button');
+  nextButton.innerHTML = '<i class="fa-solid fa-chevron-right text-[23px]"></i>'; // Using Font Awesome icon
+  nextButton.className = `px-4 py-2 rounded ${
+    currentPage === totalPages
+      ? 'text-[#FEFEFE] cursor-not-allowed'
+      : ' text-[#FEFEFE]'
+  }`;
+  nextButton.addEventListener('click', () => {
+    if (currentPage < totalPages) {
+      currentPage++;
+      renderCards(currentPage);
+      renderPagination();
+    }
+  });
+  paginationControls.appendChild(nextButton);
 }
 
 // Initial render
 renderCards(currentPage);
 renderPagination();
+
+
+
 
 
 // artical and news 
