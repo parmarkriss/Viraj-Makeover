@@ -147,7 +147,7 @@ document.addEventListener("DOMContentLoaded", () => {
     <a 
       href="${item.link}" 
       class="inline-block text-sm font-medium ${isGreen ? "text-[#009746]" : "text-white"
-      } rounded-lg transition">
+      } rounded-lg transition hover:text-[#009746]">
       Read More <i class="fa-solid fa-arrow-right"></i>
     </a>
     <span class="text-white">

@@ -15,20 +15,27 @@ closeMenu.addEventListener('click', function () {
     header.classList.remove('hidden'); // Show the header again when the menu is closed
 });
 
- // Get the current page URL
- const currentPages = window.location.pathname;
+// Get the current page URL and remove any trailing slash
+const currentPages = window.location.pathname.replace(/\/$/, '') || '/';
 
- // Select all the navigation links
- const navLinks = document.querySelectorAll('.nav-link');
+// Select all the navigation links
+const navLinks = document.querySelectorAll('.nav-link');
 
- // Loop through all links and add active class to the current page's link
- navLinks.forEach(link => {
-     if (link.href.includes(currentPages)) {
-         link.classList.add('text-[#009746]');  // Apply blue color to the active page link
-     } else {
-         link.classList.add('text-white'); // Apply white color to the non-active links
-     }
- });
+// Loop through all links and add the active class to the current page's link
+navLinks.forEach(link => {
+    // Get the href attribute of the link and remove any trailing slash
+    const linkPath = link.getAttribute('href').replace(/\/$/, '') || '/';
+
+    // Check if the current page matches the link's href
+    if (linkPath === currentPages) {
+        link.classList.add('text-[#009746]');  // Add green color for the active page link
+        link.classList.remove('text-white');   // Remove white color
+    } else {
+        link.classList.add('text-white');      // Add white color for non-active links
+        link.classList.remove('text-[#009746]'); // Remove green color if present
+    }
+});
+
 
 
  
