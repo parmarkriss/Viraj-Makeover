@@ -163,10 +163,10 @@ function renderCards(page) {
       <div class="shadow-lg rounded-lg overflow-hidden p-3 border-[1px] border-[#fefefe3b]">
         <img src="${data.image}" alt="${data.title}" class="w-full h-56 rounded-md object-cover bg-center">
         <div class="flex justify-between items-center p-4">
-          <h3 class="text-lg font-bold mb-2 ${
+          <h3 class="text-md lg:text-lg font-bold mb-2 ${
             isFirstCard ? 'text-[#009746]' : 'text-white'
           } font">${data.title}</h3>
-          <div>
+          
             <a href="${data.link}" class="px-6 py-3 rounded-full transition font ${
               isFirstCard
                 ? 'bg-[#009746] text-white hover:bg-green-600'
@@ -174,10 +174,11 @@ function renderCards(page) {
             }">
               Explore <i class="fa-solid fa-arrow-right"></i>
             </a>
-          </div>
+          
         </div>
       </div>`;
     cardContainer.innerHTML += card;
+    
   });
 }
 

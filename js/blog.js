@@ -135,7 +135,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 </div>
 <div class="p-5">
-  <h2 class="text-xl font-bold ${isGreen ? "text-green-500" : "text-white"
+  <h2 class="text-md font ${isGreen ? "text-green-500" : "text-white"
       } mb-2 tracking-wider">
     ${item.title}
   </h2>
@@ -146,9 +146,9 @@ document.addEventListener("DOMContentLoaded", () => {
   <div class="flex justify-between items-center">
     <a 
       href="${item.link}" 
-      class="inline-block text-sm font-medium ${isGreen ? "text-[#009746]" : "text-white"
+      class="inline-block text-sm font font-medium ${isGreen ? "text-[#009746]" : "text-white"
       } rounded-lg transition hover:text-[#009746]">
-      Read More <i class="fa-solid fa-arrow-right"></i>
+      Read More <i class="fa-solid fa-arrow-right ps-1"></i>
     </a>
     <span class="text-white">
       <i class="fa-solid fa-calendar-days pe-1"></i> ${item.date}

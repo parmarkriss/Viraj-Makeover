@@ -161,16 +161,27 @@
         </div>
     </section>
 
-    <section class="bg-[#212121] py-16">
+    <section class="bg-[#212121] py-10 lg:py-16">
         <div class="container mx-auto ">
             
             <div class="row">
-                <div
-                    class="flex flex-col md:flex-row items-center justify-center md:space-x-3 space-y-3 md:space-y-0 text-center md:text-left">
-                    <h1 class="font text-[32px] md:text-[48px] font-bold text-white">
-                        The Latest <span class="text-[#009746]">Article <br class="block md:hidden"> & News</span>
+                <div class="hidden lg:flex items-center justify-center space-x-3 text-center ">
+                    <h1 class="font text-[48px] font-bold text-white">
+                        The Latest<span class="text-[#009746]">Article <br class="block md:hidden"> & News</span>
                     </h1>
                     <img src="images/Section.png" alt="Section Icon" class="w-10 h-10">
+                </div>
+
+                <div class="block lg:hidden text-center space-y-2 pb-3">
+                    <h1 class="font text-[25px] md:text-[48px] font-bold text-white">
+                        The Latest <span class="text-[#009746]">Article</span>
+                    </h1>
+                    <div class="flex items-center justify-center gap-2">
+                        <span class="font text-[25px] md:text-[48px] font-bold text-[#009746]">
+                            & News
+                        </span>
+                        <img src="images/Section.png" alt="Section Icon" class="w-10 h-10">
+                    </div>
                 </div>
 
             </div>
@@ -178,7 +189,7 @@
         <div class="flex justify-center relative">
             <img src="images/Group 1000004492.png" alt="" class="absolute right-[8%] top-0 hidden lg:block">
             
-            <div id="card-container-blog" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pt-10">
+            <div id="card-container-blog" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pt-3 lg:pt-10">
             </div>
         </div>
         <div class="flex justify-center pt-5">
@@ -191,8 +202,9 @@
 
     <!-- Contact Us -->
     <section class="bg-[#212121]">
-        <div class="container mx-auto py-16">
+        <div class="container mx-auto py-2">
             <div class="row">
+
                 <div class="flex items-center justify-center space-x-3">
                     <h1 class="font text-[32px] md:text-[48px] font-bold text-white">
                         Contact <span class="text-[#009746]">Us</span>
@@ -200,7 +212,9 @@
                     <img src="images/Section.png" alt="Section Icon" class="w-10 h-10">
                 </div>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 py-10 px-5  gap-3 md:flex md:items-center">
+
+                <div
+                    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 py-5 md:py-10 px-5  gap-3 md:flex md:items-center">
                     <div>
                         <div class="flex items-center">
                             <i class="fa-solid fa-location-dot text-white"></i>
@@ -216,7 +230,9 @@
                             <p class="text-[#B8B8B8] text-font ps-3"> purefamilysalon@gmail.com</p>
                         </div>
                         <img src="images/image.png" alt="" class="pt-8">
+
                     </div>
+
 
                     <div class="bg-[url('images/Group.png')] p-10 bg-cover bg-center rounded-xl ">
                         <input type="text" class="bg-[#393C3F] text-white w-full p-3  rounded-lg" placeholder="Name">
