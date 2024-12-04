@@ -5,14 +5,14 @@ const closeMenu = document.getElementById('close-menu');
 
 // Toggle the menu visibility
 menuToggle.addEventListener('click', function () {
-    menu.classList.toggle('hidden');
-    header.classList.toggle('hidden'); // Hide the header when the menu is open
+  menu.classList.toggle('hidden');
+  header.classList.toggle('hidden'); // Hide the header when the menu is open
 });
 
 // Close the menu
 closeMenu.addEventListener('click', function () {
-    menu.classList.add('hidden');
-    header.classList.remove('hidden'); // Show the header again when the menu is closed
+  menu.classList.add('hidden');
+  header.classList.remove('hidden'); // Show the header again when the menu is closed
 });
 
 // Get the current page URL and remove any trailing slash
@@ -23,22 +23,26 @@ const navLinks = document.querySelectorAll('.nav-link');
 
 // Loop through all links and add the active class to the current page's link
 navLinks.forEach(link => {
-    // Get the href attribute of the link and remove any trailing slash
-    const linkPath = link.getAttribute('href').replace(/\/$/, '') || '/';
+  // Get the href attribute of the link and remove any trailing slash
+  const linkPath = link.getAttribute('href').replace(/\/$/, '') || '/';
 
-    // Check if the current page matches the link's href
-    if (linkPath === currentPages) {
-        link.classList.add('text-[#009746]');  // Add green color for the active page link
-        link.classList.remove('text-white');   // Remove white color
-    } else {
-        link.classList.add('text-white');      // Add white color for non-active links
-        link.classList.remove('text-[#009746]'); // Remove green color if present
-    }
+  // Check if the current page is under the Products section or is exactly on /product.html
+  if (
+    (linkPath === '/product.html' && currentPages.startsWith('/product')) ||
+    (linkPath === '/blog.html' && currentPages.startsWith('/blog')) || // Check for Blog
+    linkPath === currentPages
+  ) {
+    link.classList.add('text-[#009746]');  // Add green color for the active page link
+    link.classList.remove('text-white');   // Remove white color
+  } else {
+    link.classList.add('text-white');      // Add white color for non-active links
+    link.classList.remove('text-[#009746]'); // Remove green color if present
+  }
 });
 
 
 
- 
+
 document.addEventListener("DOMContentLoaded", () => {
   const data = [
     {
@@ -69,18 +73,18 @@ document.addEventListener("DOMContentLoaded", () => {
   ];
 
   const cardContainer = document.getElementById("card-container");
-  
+
 
   data.forEach((item, index) => {
     const card = document.createElement("div");
-    
+
     // Dynamically add the "hidden" class for cards after the first on mobile
     const isHiddenOnMobile = index > 0 ? "hidden sm:block" : "";
-  
+
     card.className = `shadow-md rounded-lg overflow-hidden ${isHiddenOnMobile}`;
-  
-    const isGreen = index === 0; 
-  
+
+    const isGreen = index === 0;
+
     card.innerHTML = `
       <div class="max-w-md md:max-w-sm xl:max-w-xl bg-[#242424] border border-[#fefefe3b] rounded-lg shadow-md overflow-hidden ">
         <div class="relative">
@@ -103,9 +107,8 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="flex justify-between items-center">
             <a 
               href="${item.link}" 
-              class="inline-block text-sm font-medium ${
-                isGreen ? 'text-[#009746]' : 'text-white'
-              } rounded-lg transition">
+              class="inline-block text-sm font-medium ${isGreen ? 'text-[#009746]' : 'text-white'
+      } rounded-lg transition hover:text-[#009746]">
               Read More <i class="fa-solid fa-arrow-right"></i>
             </a>
             <span class="text-white"><i class="fa-solid fa-calendar-days pe-1"></i> ${item.date}</span>
@@ -115,7 +118,7 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
     cardContainer.appendChild(card);
   });
-  
+
 });
 
 
@@ -145,6 +148,7 @@ const cardContainer = document.getElementById('card-containers');
 const paginationControls = document.getElementById('pagination-controls');
 
 // Function to render cards for the current page
+// Function to render cards for the current page
 function renderCards(page) {
   cardContainer.innerHTML = ''; // Clear previous cards
   const startIndex = (page - 1) * cardsPerPage;
@@ -152,14 +156,22 @@ function renderCards(page) {
 
   // Add cards for the current page
   const currentCards = cardsData.slice(startIndex, endIndex);
-  currentCards.forEach(data => {
+  currentCards.forEach((data, index) => {
+    const isFirstCard = index === 0; // Check if it's the first card
+
     const card = `
       <div class="shadow-lg rounded-lg overflow-hidden p-3 border-[1px] border-[#fefefe3b]">
         <img src="${data.image}" alt="${data.title}" class="w-full h-56 rounded-md object-cover bg-center">
         <div class="flex justify-between items-center p-4">
-          <h3 class="text-lg font-bold mb-2 text-white font">${data.title}</h3>
+          <h3 class="text-lg font-bold mb-2 ${
+            isFirstCard ? 'text-[#009746]' : 'text-white'
+          } font">${data.title}</h3>
           <div>
-            <a href="${data.link}" class="bg-[#009746] text-white px-6 py-3 rounded-full hover:bg-green-600 transition font">
+            <a href="${data.link}" class="px-6 py-3 rounded-full transition font ${
+              isFirstCard
+                ? 'bg-[#009746] text-white hover:bg-green-600'
+                : 'border text-white hover:bg-green-600'
+            }">
               Explore <i class="fa-solid fa-arrow-right"></i>
             </a>
           </div>
@@ -169,6 +181,7 @@ function renderCards(page) {
   });
 }
 
+
 function renderPagination() {
   paginationControls.innerHTML = ''; // Clear previous controls
   const totalPages = Math.ceil(cardsData.length / cardsPerPage);
@@ -176,11 +189,10 @@ function renderPagination() {
   // Create "Previous" button
   const prevButton = document.createElement('button');
   prevButton.innerHTML = '<i class="fa-solid fa-chevron-left text-[23px]"></i>'; // Using Font Awesome icon
-  prevButton.className = `px-4 py-2 rounded ${
-    currentPage === 1
+  prevButton.className = `px-4 py-2 rounded ${currentPage === 1
       ? 'text-[#FEFEFE] cursor-not-allowed'
       : ' text-[#FEFEFE]'
-  }`;
+    }`;
   prevButton.addEventListener('click', () => {
     if (currentPage > 1) {
       currentPage--;
@@ -199,11 +211,10 @@ function renderPagination() {
   // Create "Next" button
   const nextButton = document.createElement('button');
   nextButton.innerHTML = '<i class="fa-solid fa-chevron-right text-[23px]"></i>'; // Using Font Awesome icon
-  nextButton.className = `px-4 py-2 rounded ${
-    currentPage === totalPages
+  nextButton.className = `px-4 py-2 rounded ${currentPage === totalPages
       ? 'text-[#FEFEFE] cursor-not-allowed'
       : ' text-[#FEFEFE]'
-  }`;
+    }`;
   nextButton.addEventListener('click', () => {
     if (currentPage < totalPages) {
       currentPage++;
