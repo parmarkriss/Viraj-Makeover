@@ -62,74 +62,61 @@
 
     <!-- Menu Section (Initially hidden) -->
     <div id="menu"
-        class="hidden md:bg-[url('images/Rectangle.png')] absolute top-0 left-0 w-full h-[75%] md:h-full bg-cover bg-center bg-[#212121] z-50 transform transition-all duration-500 ease-in-out">
-        <div class="container mx-auto">
-            <div class="row">
-                <div class="pt-5 px-4">
-                    <div class="flex justify-between items-center md:justify-between">
-
-                        <img src="images/viraj_logo-removebg-preview 1.png" alt="Logo" class="w-20">
-
-                        <button id="close-menu" class="text-white text-3xl ">
-                            <i class="fa-solid fa-times"></i>
-                        </button>
-                    </div>
-
-
-                    <!-- Navigation Links -->
-                    <ul class="flex flex-col space-y-3 lg:space-y-5 text-white font text-center mt-8 lg:mt-[10%]">
-                        <li><a href="/" class="text-2xl nav-link hover:text-[#009746]">Home</a></li>
-                        <!-- Default to "/" for Home -->
-                        <li><a href="/about.html" class="text-2xl nav-link hover:text-[#009746]">About Us</a></li>
-                        <li><a href="/product.html" class="text-2xl nav-link hover:text-[#009746]">Products</a></li>
-                        <li><a href="/gallery.html" class="text-2xl nav-link hover:text-[#009746]">Gallery</a></li>
-                        <li><a href="/blog.html" class="text-2xl nav-link hover:text-[#009746]">Blog</a></li>
-                        <li><a href="/contact.html" class="text-2xl nav-link hover:text-[#009746]">Contact Us</a></li>
-                    </ul>
+    class="hidden md:bg-[url('images/Rectangle.png')] fixed top-0 left-0 w-full h-[75%] md:h-full bg-cover bg-center bg-[#212121] z-50 transform transition-all duration-500 ease-in-out -translate-y-full">
+    <div class="container mx-auto">
+        <div class="row">
+            <div class="pt-5 px-4">
+                <div class="flex justify-between items-center md:justify-between">
+                    <img src="images/viraj_logo-removebg-preview 1.png" alt="Logo" class="w-20">
+                    <button id="close-menu" class="text-white text-3xl">
+                        <i class="fa-solid fa-times"></i>
+                    </button>
                 </div>
+
+                <!-- Navigation Links -->
+                <ul class="flex flex-col space-y-3 lg:space-y-5 text-white font text-center mt-8 lg:mt-[10%]">
+                    <li><a href="/" class="text-2xl nav-link hover:text-[#009746]">Home</a></li>
+                    <li><a href="/about.html" class="text-2xl nav-link hover:text-[#009746]">About Us</a></li>
+                    <li><a href="/product.html" class="text-2xl nav-link hover:text-[#009746]">Products</a></li>
+                    <li><a href="/gallery.html" class="text-2xl nav-link hover:text-[#009746]">Gallery</a></li>
+                    <li><a href="/blog.html" class="text-2xl nav-link hover:text-[#009746]">Blog</a></li>
+                    <li><a href="/contact.html" class="text-2xl nav-link hover:text-[#009746]">Contact Us</a></li>
+                </ul>
             </div>
         </div>
-
-
-        <div class="mt-[12%] p-6 border-t border-b border-white/10 hidden md:block">
-            <div class="container mx-auto">
-                <div class="row grid grid-cols-1 md:grid-cols-3 gap-4 text-center text-sm">
-                    <div class="flex items-center rounded-lg">
-                        <button
-                            class="text-white text-lg w-12 h-12 border rounded-full flex justify-center items-center">
-                            <i class="fa-solid fa-location-dot"></i>
-                        </button>
-
-                        <!-- Address Text -->
-                        <span class="text-[16px] text-start text-[#B8B8B8] text-font ms-3">
-                            211, The Grand Plaza, VIP Road, Vesu,<br> Surat, Gujarat 395007
-                        </span>
-                    </div>
-
-
-                    <div class="p-5 flex  items-center justify-center">
-                        <button
-                            class="text-white text-lg w-12 h-12 border rounded-full flex justify-center items-center">
-                            <i class="fa-solid fa-phone-volume  text-lg"></i>
-                        </button>
-
-                        <span class="text-[22px] text-[#B8B8B8] text-font ms-3">08048128938</span>
-                    </div>
-
-
-                    <div class="p-5 flex  items-center justify-center">
-                        <button
-                            class="text-white text-lg w-12 h-12 border rounded-full flex justify-center items-center">
-                            <i class="fa-solid fa-envelope text-lg"></i>
-                        </button>
-
-                        <span class="text-[22px] text-[#B8B8B8] text-font ms-3"> purefamilysalon@gmail.com</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
     </div>
+
+    <div class="mt-[12%] p-6 border-t border-b border-white/10 hidden md:block">
+        <div class="container mx-auto">
+            <div class="row grid grid-cols-1 md:grid-cols-3 gap-4 text-center text-sm">
+                <div class="flex items-center rounded-lg">
+                    <button
+                        class="text-white text-lg w-12 h-12 border rounded-full flex justify-center items-center">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </button>
+                    <span class="text-[16px] text-start text-[#B8B8B8] text-font ms-3">
+                        211, The Grand Plaza, VIP Road, Vesu,<br> Surat, Gujarat 395007
+                    </span>
+                </div>
+                <div class="p-5 flex items-center justify-center">
+                    <button
+                        class="text-white text-lg w-12 h-12 border rounded-full flex justify-center items-center">
+                        <i class="fa-solid fa-phone-volume text-lg"></i>
+                    </button>
+                    <span class="text-[22px] text-[#B8B8B8] text-font ms-3">08048128938</span>
+                </div>
+                <div class="p-5 flex items-center justify-center">
+                    <button
+                        class="text-white text-lg w-12 h-12 border rounded-full flex justify-center items-center">
+                        <i class="fa-solid fa-envelope text-lg"></i>
+                    </button>
+                    <span class="text-[22px] text-[#B8B8B8] text-font ms-3">purefamilysalon@gmail.com</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 
     <!-- slider section -->
     <section class="relative flex items-center justify-center bg-[#242424] -z-10">
@@ -298,7 +285,7 @@
     </section>
 
     <!-- Our Gallery -->
-    <section class="relative bg-[url('images/Group.png')] bg-center xl:bg-cover">
+    <section class="relative lg:bg-[url('images/Group.png')] bg-[#141516c2] bg-center xl:bg-cover">
         <div class="absolute inset-0 bg-[#131313] bg-opacity-50 mix-blend-multiply backdrop-blur-md"></div>
 
         <div class="container mx-auto p-5 md:p-10 relative z-10">

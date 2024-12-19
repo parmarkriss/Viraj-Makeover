@@ -6,13 +6,15 @@ const closeMenu = document.getElementById('close-menu');
 // Toggle the menu visibility
 menuToggle.addEventListener('click', function () {
   menu.classList.toggle('hidden');
-  header.classList.toggle('hidden'); // Hide the header when the menu is open
+  header.classList.toggle('hidden');
+  menu.style.transform = 'translateY(0)'; // Hide the header when the menu is open
 });
 
 // Close the menu
 closeMenu.addEventListener('click', function () {
   menu.classList.add('hidden');
-  header.classList.remove('hidden'); // Show the header again when the menu is closed
+  header.classList.remove('hidden');
+   // Show the header again when the menu is closed
 });
 
 // Get the current page URL and remove any trailing slash
